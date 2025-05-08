@@ -1,0 +1,51 @@
+/*
+ * 
+-- SYNTHESE
+-- Infos Par Actif :
+	- Taux Occupation
+		Annuel
+		Mensuel
+	- GLOBAL :
+		Budget Charges 
+		Loyers Percus ( Loyers HT + Provisions )
+	- ANNNUEL		
+		Budget Charges
+		Loyers Percus ( Loyers HT + Provisions )
+*/
+
+
+\set report_name_prefix bien
+
+\C "REPORTING > BIEN"
+
+select to_char( current_date, 'YYYY-MM-DD' ) as d_date \gset
+
+\set report_path ./Reports/:report_name_prefix __ :d_date .txt
+
+\! touch :report_path
+\o :report_path
+
+
+-- Taux de remplissage global
+-- Période de Vacance
+
+\echo 'COLOCATAIRES : Taux occupation ( Brut et Net )'
+\echo 'Net : Depuis le premier bail et jusqu''à la date en cours'
+\echo 'Brut : Annuel, sans tenir compte des dates'
+/*
+ * Pseudo Code :
+ * 	Pour chaque annee :
+ * 		Pour chaque jour : compter le nombre de colocataires présents
+ */
+
+
+SELECT id, label FROM test.bien;
+
+\prompt 'Sélectionner l''id de l''actif cible : ' id  
+
+
+SELECT * FROM test.colocation_calculer_taux_occupation_annuel( :id );
+SELECT id_actif AS id, label, nb_baux AS "Nb Baux" FROM test.actif_nb_baux( :id );
+
+
+\ir ./psql_restore_config.psql

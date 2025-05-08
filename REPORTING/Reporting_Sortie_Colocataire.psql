@@ -1,0 +1,160 @@
+\ir ./psql_local_config.psql
+/*
+ * TODO : 
+ * 		- Gérer les faux départ !
+ * 		- TEOM
+ */
+
+/*
+ * RAPPORT COLOCATAIRE A DESTINATION DU COLOCATAIRE ...
+ * 1 - Affichage des infos statiques :
+ * 		nom
+ * 		prenom
+ * 		date debut bail
+ * 		date fin de bail
+ * 		durée du bail ( age + nb jours ) 
+ * 		caution versée
+ * 		reliquat potentiel mois à venir
+ * 
+ *  	charges moyennes mensuelles
+ * 
+ *  
+ * 		ETAT DES CHARGES
+ * 			Type :
+ * 			Date Arrêt :
+ * 			Période Aveugle : ( en jours )
+ * 			Montant Aveugle : ( Moyenne jour / nb coloc ) * nb jours
+ * 
+ * 			Total des charges facturées sur la période :
+ * 			Part du colocataire :
+ * 			total des charges provisionnées : 
+ * 		
+ * 			Avance Propriétaire : part colocataire - provisions versées + somme des montants aveugles 
+ * 			Solde : caution - avance Propriétaire
+ */
+
+\C '>> LISTE DES COLOCATAIRES :'
+	SELECT * FROM :env_for_charges.locataire;
+\C
+
+\set report_mode_sortie ON
+
+\if :{?id_colocataire}
+	\prompt 'Identifiant du colocataire ?' id_colocataire
+\endif
+
+
+\set  report_name_prefix sortie_colocataire
+
+-- select to_char( current_date, 'YYYY-MM-DD' ) as d_date \gset
+
+\set report_path ./Reports/:report_name_prefix __ :id_colocataire __ :d_date .txt
+
+\! touch :report_path
+\o :report_path
+
+
+\qecho 'COLOCATAIRES : Situation'
+SELECT 
+	nom,
+	prenom, 
+	lower( periode_occupation ) AS "Début Bail",
+	upper( periode_occupation ) AS "Fin Bail",
+	montant_caution AS "Montant Caution",
+	provision_charge_mensuelle AS "Provision Mensuelle",
+	test.total_provisions_payees_a_date( id )::money AS "Total Provisions Payées",
+	test.total_loyer_payes_hc_a_date( id )::money AS "Total Loyers Payés",
+	test.verbose_duration_bail( id ) AS "Durée du Bail",
+	est_charge_cloturable AS  "Charges Cloturables ?", 
+	est_charge_cloture AS "Charges Cloturées ?"
+FROM
+	:env_for_charges.locataire
+WHERE id = :id_colocataire
+ORDER BY lower( periode_occupation );
+	
+
+\qecho 'Bilan occupation de la colocation :'
+SELECT 
+	*,
+	( NB_jours_commun::numeric( 10, 2 ) / NB_jours_total::numeric( 10, 2 ) )::NUMERIC( 10, 2 ) * 100 AS pourcentage
+	--, ntile( 3 ) OVER ( PARTITION BY NB_jours_commun ORDER BY NB_jours_commun ASC ) AS "WF" // add a window function ?
+from :env_for_charges.bilan_occupation( :id_colocataire ) AS ( NB_jours_total int, effectif int, NB_jours_commun int )
+ORDER BY pourcentage DESC, effectif asc;
+
+\ir ./Reporting_Regularisation_Colocataire.psql
+
+
+-- restore psq parameters and exits
+\ir psql_restore_config.psql
+\q
+	
+
+-----------------------------------------------------
+
+	TABLE test.locataire;
+
+
+SELECT 
+	*,
+	( NB_jours_commun::numeric( 10, 2 ) / NB_jours_total::numeric( 10, 2 ) )::NUMERIC( 10, 2 ) * 100 AS pourcentage
+	--, ntile( 3 ) OVER ( PARTITION BY NB_jours_commun ORDER BY NB_jours_commun ASC ) AS "WF" // add a window function ?
+from test.bilan_occupation( 9 ) AS ( NB_jours_total int, effectif int, NB_jours_commun int )
+ORDER BY pourcentage DESC, effectif asc;
+
+/*
+ * CHARGES
+ * 		Pour chaque type de charges, afficher les périodes manquantes ( si existantes )
+ */
+
+
+/*
+ * 2 - Affichage des régularisations
+ * 		2.1 : absence d'antécédent de régularisation
+ * 			- On génère une régul avec les factures en cours
+ *			- Pour chaque TYPE de facture :
+ *				- soit la période du bail est couverte
+ *				- soit une période est 'aveugle'
+ * 
+ * 		2.2 : présence d'antécédents de régularisation
+ * 			- rappel des régul précédentes
+ * 			- générer une regul de clôture
+ */
+
+/*
+ * BILAN COMPTABLE
+ * 	Total perçu :
+ * 		charges provisionnées + caution
+ *  Total avancé :
+ * 		gérer avec les régularisations 
+ */
+
+
+/*
+ * INFOS SPECIFIQUES BAILLEUR :
+ * 		montant total des revenus générés ( loyers, provisions, retenues sur caution )
+ */
+------
+1 - Gérer sans antécédent de régularisation
+	PSEUDO ALGO :
+		ON lance une régul postérieur à la date de fin du bail
+		- 
+		
+		
+-- LIP / Window Functions		
+SELECT 
+	id,
+	nom,
+	prenom, 
+	test.total_loyer_payes_hc_a_date( id )::money AS "Total Loyers Payés",
+	loyer_mensuel_hc,
+	ntile( 16 ) OVER ( PARTITION BY loyer_mensuel_hc ORDER BY id ),
+	row_number() OVER ( PARTITION BY loyer_mensuel_hc ORDER BY id ),
+	rank() OVER ( PARTITION BY loyer_mensuel_hc ORDER BY id ),
+	dense_rank() OVER ( PARTITION BY loyer_mensuel_hc ORDER BY id ),
+	percent_rank() OVER ( PARTITION BY loyer_mensuel_hc ORDER BY id ),
+	cume_dist() OVER ( PARTITION BY loyer_mensuel_hc ORDER BY id )
+FROM
+	test.locataire;
+	
+
+

@@ -1,0 +1,48 @@
+API RECAP :
+tous commentaires dans le code.
+
+TRIGGERS :
+	f_trg_charges_insert ()
+	f_trg_charges_map_lo ()
+	f_trg_colocataire_insert_or_update () // inactif 
+	
+BIEN & ACTIF :
+	actif_calculer_taux_occupation_annuel( net )
+	actif_nb_baux( id_bien )
+	periodes_vacance()
+	
+
+CHARGES :
+	charge_est_facturee_sur_annee ( arg_type_charge integer, annee NUMERIC )
+	charges_sont_facturees_sur_annee
+	charges_sont_periodes_fusionnables ( type_facture )
+	verifier_factures_sont_adjacentes () // inacctif 
+	charges_sont_cloturables( id_locataire )
+	apercu_global_encours_de_charge () // inacctif 
+
+
+
+COLOCATAIRES :
+	colocataire_lire_basique_info( id_colocataire ) 
+	verbose_duration_bail( locataire_id )
+	date_fin_bail( locataire_id )
+	nb_colocataires_present( d )
+	total_loyer_payes_hc_a_date( locataire_id )
+	total_provisions_payees_a_date( locataire_id )
+	calcul_provisions_payees( locataire_id  )
+	
+
+
+REGULARISATIONS :
+	regularisation_moteur_de_calcul( locataire_id, 'calcul' | 'pertinence', date NULL* )
+	regularisation_apercu_situation_colocataire ( locataire_id )
+	regularisation_creer_pour_colocataire ( locataire_id )
+	regularisation_precondition_calcul( locataire_id )
+	regularisation_est_presente ( locataire_id )
+	regularisation_est_pertinente( id_locataire integer, date_regul text default now() )
+	lire_derniere_date_regul ()
+	
+	CAS :
+		L.Pichon / B. Banc ... clôture de charges basique / sans régularisation intermédiare ( première et dernière )
+		Remy Nallet ... Cloture basique avec charge personnelle ( ménage )
+		Vincent Marida ... Clôture intermédiaire ( arbitraire ) avec cadeau

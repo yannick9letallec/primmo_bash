@@ -1,0 +1,26 @@
+  "REPORTING > BIEN"
+ id |      label       
+----+------------------
+  1 | Montlouis Maison
+(1 ligne)
+
+  "REPORTING > BIEN"
+ annee | tx_occupation 
+-------+---------------
+ 2023  |         15.07
+ 2024  |         47.07
+ 2025* |         71.71
+(3 lignes)
+
+    "REPORTING > BIEN"
+ id |   label   | Nb Baux 
+----+-----------+---------
+  1 | Chambre 1 |       2
+  2 | Chambre 2 |       2
+  3 | Chambre 3 |       2
+  4 | Chambre 4 |       2
+  5 | Chambre 5 |       2
+  6 | Chambre 6 |       1
+  7 | Chambre 7 |       0
+(7 lignes)
+

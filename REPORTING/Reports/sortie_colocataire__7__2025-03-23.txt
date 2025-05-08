@@ -1,0 +1,38 @@
+COLOCATAIRES : Situation
+  nom   | prenom | Début Bail |  Fin Bail  | Montant Caution | Provision Mensuelle | Total Provisions Payées | Total Loyers Payés |    Durée du Bail    | Charges Cloturables ? | Charges Cloturées ? 
+--------+--------+------------+------------+-----------------+---------------------+-------------------------+--------------------+---------------------+-----------------------+---------------------
+ Nallet | Remi   | 2024-10-07 | 2025-03-14 |             680 |                  50 |                261,48 € |         1 778,03 € | 5 Mois, 7 Jour( s ) | f                     | f
+
+Bilan occupation de la colocation :
+ nb_jours_total | effectif | nb_jours_commun | pourcentage 
+----------------+----------+-----------------+-------------
+            159 |        5 |             100 |       63.00
+            159 |        6 |              33 |       21.00
+            159 |        3 |              19 |       12.00
+            159 |        4 |               7 |        4.00
+            159 |        0 |               0 |        0.00
+            159 |        1 |               0 |        0.00
+            159 |        2 |               0 |        0.00
+            159 |        7 |               0 |        0.00
+
+
+
+
+INFOS REGULARISATIONS :
+  nom   | prenom | id | fk_colocataire | ts_date_regularisation | credit_bailleur_sur_provision | montant_reel_demande | total_charges_provisionnees | total_charges_reelles_individuelles | total_charges_reelles_globalles | est_soldee | note | id | prenom |  nom   | fk_numero_chambre |   periode_occupation    | loyer_mensuel_hc | montant_caution | provision_charge_mensuelle | loyer_total | date_depart_reelle | est_charge_cloturable | date_cloturabilite_effective | est_charge_cloture | note 
+--------+--------+----+----------------+------------------------+-------------------------------+----------------------+-----------------------------+-------------------------------------+---------------------------------+------------+------+----+--------+--------+-------------------+-------------------------+------------------+-----------------+----------------------------+-------------+--------------------+-----------------------+------------------------------+--------------------+------
+ Nallet | Remi   |  1 |              7 | 2025-03-22 09:00:00+10 |      884.87217883060109196673 |                      |        261.4754098360655740 |           1146.34758866666666596673 |                      4298.90452 | f          |      |  7 | Remi   | Nallet |                 4 | [2024-10-07,2025-03-14) |              340 |             680 |                         50 |         390 |                    | f                     |                              | f                  | 
+
+    label    | id | fk_regularisation | fk_type_charge | fk_ligne_regularisation_type | montant_total |    montant_individuel    |     ts_date_arret      | note 
+-------------+----+-------------------+----------------+------------------------------+---------------+--------------------------+------------------------+------
+ exception   |  5 |                 1 |           9999 |                            1 |           246 |                      246 |                        | 
+ TEOM        |  4 |                 1 |           8888 |                            1 |     434.97293 |  91.85921616666666666684 | 2025-03-14 09:00:00+10 | 
+ eau         |  1 |                 1 |              1 |                            2 |        103.35 |                   103.35 | 2025-03-14 09:00:00+10 | 
+ gaz         |  2 |                 1 |              2 |                            1 |     2753.5382 |     546.9951716666666666 | 2025-03-14 09:00:00+10 | 
+ electricité |  3 |                 1 |              3 |                            1 |     761.04339 | 158.14320083333333269989 | 2025-03-14 09:00:00+10 | 
+
+MOYENNE DES CHARGES ( mensuel ) :
+ moyenne_charges_mensuelles 
+----------------------------
+                   219,21 €
+

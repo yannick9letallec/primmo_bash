@@ -1,0 +1,37 @@
+-- DEFAULT CCONFIG FILE FOR MINIMAL - PSQL - REPORTING PROJECT.
+
+
+-- #1 - PSQL VARS
+-- setting PSQL 'OUTPUT' Parameters
+\set ON_ERROR_STOP ON
+
+-- general verbosity mode
+\set ECHO errors
+-- Verbosity : apply to error report
+\set VERBOSITY verbose
+\set SHOW_CONTEXT errors
+
+-- setting PSQL 'DISPLAY' Parameters
+\pset pager off
+\pset format aligned
+\pset footer OFF
+\timing off
+
+
+
+
+
+
+-- #2 - USER VARS
+-- unsetting commonly used vars
+\unset ids
+\unset locataire_existe
+\unset locataire_id
+\unset report_mode_sortie
+\unset ROW_COUNT
+\unset env_for_charges
+
+\set env_for_charges test
+\setenv env_for_charges :env_for_charges
+
+select to_char( current_date, 'YYYY-MM-DD' ) as d_date \gset

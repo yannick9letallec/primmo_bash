@@ -1,0 +1,124 @@
+-- LISTER LES REGULARISATIONS PAR COLOCATAIRE
+-- Date: 15 fév. 2025
+-- Time: 10:36:26
+
+/* TODO : taux de charge du colcoataire
+ * 
+ * nom
+ * prenom
+ * date_entrée
+ * moyenne de charge mensuelle
+ * 
+ * Historique des régularisations :
+ */
+
+
+-- Adaptation du flux d'execution au contexte d'appel ... ( Autonome OU appelé par le reporting de sortie )
+\if :{?report_mode_sortie}
+	\echo 'CHAINE AVEC LE REPORTING DE SORTIE'
+	\set report_path :report_path
+\else
+	\ir psql_local_config.psql
+	
+	\echo 'APPEL AUTONOME DU REPORTING DE REGULARISATION'
+	
+	\C Liste des Colocataires :
+	SELECT * FROM :env_for_charges.locataire;
+	\C
+
+	\prompt 'Identifiant du colocataire ?: ' id_colocataire 
+	
+	-- direct call after \prompt to eexit on error, before attempting to touch a report file
+	SELECT id::boolean AS locataire_existe FROM :env_for_charges.locataire WHERE id = :id_colocataire LIMIT 1 \gset
+	
+	\set report_name_prefix colocataire_regularisation
+
+	\set report_path ./Reports/:report_name_prefix __ :id_colocataire __ :d_date .txt
+	\! touch :report_path
+
+	\o :report_path
+
+	SELECT * FROM :env_for_charges.locataire_lire_basique_info( :id_colocataire  );
+	
+\endif
+
+\echo COLOCATAIRE : REPORTING REGULARISATION ( :d_date )
+
+\qecho 
+\qecho 
+\qecho 
+
+
+-- lire les régularisations
+\qecho INFOS REGULARISATIONS :
+
+-- on stocke les ids dans la var ids de psql
+SELECT array_to_string( array_agg( id ORDER BY id ), ' ' ) AS ids FROM :env_for_charges.regularisation WHERE fk_locataire = :id_colocataire \gset
+
+-- :ids est exportée par le process psql ( accessible à psql & childs )
+-- si on a des regularisations :
+\echo '> ------------------------------------------------------------------' 
+\if :{?ids}
+	\echo '# ------------------------------------------------------------------' 
+	\setenv id_reguls_colocataire :ids
+
+	-- pour sertir d'intrant à 
+	\! ./regularisation_reporting_helper.sh
+
+	\ir ./regularisation_reporting_queries.sh
+
+
+	\qecho MOYENNE DES CHARGES ( mensuel ) :
+
+	SELECT sum( total_charges_reelles_individuelles ) AS total_charges_reelles FROM test.regularisation WHERE fk_locataire = :id_colocataire \gset
+
+	SELECT 
+		( :total_charges_reelles / (
+			EXTRACT( YEAR FROM age( COALESCE( upper( periode_occupation), current_date ), lower( periode_occupation ) ) ) * 12  +
+	    	EXTRACT( MONTH FROM AGE( COALESCE( upper( periode_occupation), current_date ), lower( periode_occupation ) ) ) +
+	    	EXTRACT( DAY FROM AGE( COALESCE( upper( periode_occupation), current_date ), lower( periode_occupation ) ) ) / 30.5
+	    ) )::money AS moyenne_charges_mensuelles
+	FROM :env_for_charges.locataire WHERE id = :id_colocataire;
+
+\else
+	\echo 'Aucune régularisation trouvée pour le locataire: ' :id_colocataire 
+	\echo 'Veuillez en créer une.'
+\endif
+
+
+-- restore psql parameters and exit
+\ir ./psql_restore_config.psql
+\q
+
+
+------------------------------------
+
+
+
+-- 4 MEMORY :
+select 
+	format( '
+		select 
+			date( ts_date_regularisation ) as date_regularisation,
+			credit_bailleur_sur_provision::money,
+ 			total_charges_provisionnees::money,
+			total_charges_reelles_individuelles::money,
+			total_charges_reelles_globalles::money	 
+		from test.regularisation 
+		where 
+			fk_locataire = %s and
+			est_reelle 
+	', :id_colocataire ), 
+	format( 'select
+			t.label, 
+			l.montant_total::money,
+			l.montant_individuel::money,
+			date( l.ts_date_arret ) as date_arret 
+		from test.ligne_regularisation l
+		inner join test.type_charge t on t.id = l.fk_type_charge
+		where 
+			fk_regularisation = %s and
+			l.est_reelle
+	', id ) 
+from test.regularisation r 
+where fk_locataire = :id_colocataire \gexec

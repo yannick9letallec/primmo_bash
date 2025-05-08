@@ -1,0 +1,39 @@
+COLOCATAIRES : Situation
+   nom   |  prenom  | Début Bail |  Fin Bail  | Montant Caution | Provision Mensuelle | Total Provisions Payées | Total Loyers Payés |    Durée du Bail    | Charges Cloturables ? | Charges Cloturées ? 
+---------+----------+------------+------------+-----------------+---------------------+-------------------------+--------------------+---------------------+-----------------------+---------------------
+ Perrini | Bernardo | 2024-11-01 | 2025-03-09 |             680 |                  50 |                213,11 € |         1 449,18 € | 4 Mois, 8 Jour( s ) | f                     | f
+
+Bilan occupation de la colocation :
+ nb_jours_total | effectif | nb_jours_commun | pourcentage 
+----------------+----------+-----------------+-------------
+            129 |        5 |              96 |       74.00
+            129 |        6 |              33 |       26.00
+            129 |        0 |               0 |        0.00
+            129 |        1 |               0 |        0.00
+            129 |        2 |               0 |        0.00
+            129 |        3 |               0 |        0.00
+            129 |        4 |               0 |        0.00
+            129 |        7 |               0 |        0.00
+
+
+
+
+INFOS REGULARISATIONS :
+   nom   |  prenom  | id | fk_colocataire | ts_date_regularisation | credit_bailleur_sur_provision | montant_reel_demande | total_charges_provisionnees | total_charges_reelles_individuelles | total_charges_reelles_globalles | est_soldee | note | id |  prenom  |   nom   | fk_numero_chambre |   periode_occupation    | loyer_mensuel_hc | montant_caution | provision_charge_mensuelle | loyer_total | date_depart_reelle | est_charge_cloturable | date_cloturabilite_effective | est_charge_cloture | note 
+---------+----------+----+----------------+------------------------+-------------------------------+----------------------+-----------------------------+-------------------------------------+---------------------------------+------------+------+----+----------+---------+-------------------+-------------------------+------------------+-----------------+----------------------------+-------------+--------------------+-----------------------+------------------------------+--------------------+------
+ Perrini | Bernardo |  2 |              9 | 2025-03-23 09:00:00+10 |      531.78567923497267790000 |                      |        213.1147540983606560 |            744.90043333333333390000 |                      3547.45682 | f          |      |  9 | Bernardo | Perrini |                 3 | [2024-11-01,2025-03-09) |              340 |             680 |                         50 |         390 |                    | f                     |                              | f                  | 
+
+    label    | id | fk_regularisation | fk_type_charge | fk_ligne_regularisation_type | montant_total |    montant_individuel    |     ts_date_arret      | note 
+-------------+----+-------------------+----------------+------------------------------+---------------+--------------------------+------------------------+------
+ TEOM        |  9 |                 2 |           8888 |                            1 |     352.96828 |  67.57995300000000000011 | 2025-03-09 09:00:00+10 | 
+ eau         |  6 |                 2 |              1 |                            2 |         83.85 |                    83.85 | 2025-03-09 09:00:00+10 | 
+ gaz         |  7 |                 2 |              2 |                            1 |     2476.7172 |     472.4511033333333339 | 2025-03-09 09:00:00+10 | 
+ electricité |  8 |                 2 |              3 |                            1 |     633.92134 | 121.01937699999999999989 | 2025-03-09 09:00:00+10 | 
+
+
+
+MOYENNE DES CHARGES ( mensuel ) :
+ moyenne_charges_mensuelles 
+----------------------------
+                   174,77 €
+

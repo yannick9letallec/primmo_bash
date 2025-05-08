@@ -1,0 +1,21 @@
+-- TODO : CLEAN LOGGING :
+	--  stdout	: running dba
+	--  file 	: archive / inspect
+	
+\ir DDL.sql
+
+
+
+\ir Triggers.sql
+
+
+
+\ir Functions.sql
+
+
+-- Live / Bsiness DATA / Moving / Semi Consolidated
+\ir Data.sql
+
+
+
+\q

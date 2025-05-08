@@ -1,0 +1,124 @@
+/*
+ * 
+ *
+ * LES CHARGES SONT LIEES A UN ACTIF.
+ * 
+	REPORTING CHARGES
+	Montant total depuis le début de l'exploitation, cad depuis le premier bail
+	Montant total annuel
+	Montant total par type de charge
+	Montant annuel par type de charge
+
+*/
+
+\ir ./psql_local_config.psql
+
+
+\set  report_name_prefix charges
+\C "REPORTING > CHARGES"
+
+select to_char( current_date, 'YYYY-MM-DD' ) as d_date \gset
+
+\set report_path ./Reports/:report_name_prefix __ :d_date .txt
+
+\! touch :report_path
+\o :report_path
+
+-- a CASE FOR WINDOW FUNCTION / ADVANCED GROUP BY CLAUSES ( CUBE / ROLLUP / Grouping SETS + grouping() )
+
+-- détecte une facture à cheval sur une année
+-- WIP - SUM BY YEAR ...
+-- TODO : 
+	-- #1 : add label in generated null values
+	-- #2 : mark if year is fully covered by invoices
+	-- #3 : ajouter les types de charges absent : N/A
+WITH detect_full_year AS (
+	-- 1 - cible les période de facture en année plein
+		SELECT 
+			id,
+			fk_type_charge,
+			periode,
+			montant AS montant_initial,
+			montant_journalier,
+			extract( YEAR FROM lower( periode )) AS annee,
+			'annee pleine' AS type_annee,
+			CASE WHEN EXTRACT( YEAR FROM lower( periode ) ) = extract( YEAR FROM upper( periode ) )  THEN
+				montant 
+			END AS montant_reparti
+		FROM test.charges 
+	-- 2 - cible les période de facture en année fractionnée ( reliquat de fin d'année )
+	UNION
+		SELECT 
+			id,
+			fk_type_charge,
+			periode,
+			montant AS montant_initial,
+			montant_journalier,
+			extract( YEAR FROM lower( periode )) AS annee,
+			'annee_fractionnee_fin_periode' AS type_annee,
+			CASE WHEN EXTRACT( YEAR FROM lower( periode ) ) <> extract( YEAR FROM upper( periode ) )  THEN
+				montant_journalier * ( ( EXTRACT ( YEAR FROM lower( periode ) )::text || '-12-31'::TEXT )::date - lower( periode ) )
+			END AS montant_reparti
+		FROM test.charges 
+	UNION
+	-- 3 - cible les période de facture en année fractionnée ( reliquat de début d'année )
+		SELECT 
+			id,
+			fk_type_charge,
+			periode,
+			montant AS montant_initial,
+			montant_journalier,
+			extract( YEAR FROM upper( periode )) AS annee,
+			'annee_fractionnee_debut_periode' AS type_annee,
+			CASE WHEN EXTRACT( YEAR FROM lower( periode ) ) <> extract( YEAR FROM upper( periode ) )  THEN
+				montant_journalier * ( upper( periode ) - ( EXTRACT ( YEAR FROM upper( periode ) )::text || '-01-01'::TEXT )::date + 1 )
+			END AS montant_reparti
+		FROM test.charges 
+		ORDER BY id, fk_type_charge
+) SELECT 
+	annee,
+	fk_type_charge,
+	grouping( annee, fk_type_charge, label  ),
+	CASE 
+		WHEN grouping( annee, fk_type_charge, label ) = 3 THEN annee::TEXT || ' - TOTAL ANNUEL : '
+		WHEN grouping( annee, fk_type_charge, label ) = 7 THEN 'TOTAL GLOBAL : '
+		ELSE t.LABEL 
+	END AS label_charge,
+	charge_est_facturee_sur_annee ( fk_type_charge, annee ),
+	-- periode_charge_couverte_sur_annee(  fk_type_charge, annee ),
+	sum( montant_reparti )::numeric( 10,2)::money AS somme
+FROM detect_full_year d
+LEFT OUTER JOIN test.type_charge t ON d.fk_type_charge = t.id
+GROUP BY ROLLUP ( annee, fk_type_charge, LABEL )
+HAVING grouping( annee, fk_type_charge, label  ) <> 1
+-- GROUP BY GROUPING SETS ( ( annee, fk_type_charge, LABEL ), annee )
+ORDER BY annee;
+
+
+
+SELECT sum( montant ) AS total_global FROM test.charges \gset
+\echo 'Total des charges payées :' :'total_global';
+
+\q
+
+TABLE test.type_charge;
+TABLE test.locataire;
+
+SELECT range_merge( range_agg(  periode  )) FROM test.charges WHERE extract( YEAR FROM date_emission ) = 2023;
+
+
+SELECT range_merge ( '[2022-10-04,2023-08-22)'::daterange, '[2023-08-22,2024-03-31)'::daterange ) = '[2022-10-04,2024-03-31)'::daterange ;
+
+
+TABLE test.charges;
+
+SELECT 
+	c.fk_type_charge,
+	sum( c.montant ) AS somme
+FROM test.charges AS c 
+GROUP BY c.fk_type_charge;
+
+
+-- restore config and exit
+\ir ./psql_restore_config.psql
+

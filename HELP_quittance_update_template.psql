@@ -1,0 +1,41 @@
+\set work_schema test
+
+\set quittance_tpl `cat ./quittance.md`
+\set quittance_email_tpl `cat ./quittance_email.md`
+
+\echo '!! DEV ONLY SCRIPT !! \n'
+
+\echo '1 > MAJ des templates des quittances ( fichier attaché & corps de l''email )'
+UPDATE 
+	:work_schema.bien 
+SET 
+	config = config || hstore( 'quittance_tpl', :'quittance_tpl' ) || hstore( 'quittance_email_tpl', :'quittance_email_tpl' )
+WHERE id IN ( 1, 2, 3 );
+
+
+\echo '2 > Suppression des quittances déjà générées'
+TRUNCATE TABLE test.quittance RESTART IDENTITY;
+
+
+\prompt 'Supprimer les fichiers de quittances existants ? ( y/N )' sup_quit 
+
+SELECT CASE WHEN :'sup_quit' = 'y' THEN TRUE ELSE FALSE END AS sup_files \gset
+
+
+\if :sup_files
+	\echo '\n\t > [TODO ] Fichiers de Quittances : Suppression'
+\else
+	\echo '\n\t > Fichiers de Quittances : Conservation'
+\endif 
+
+
+\prompt 'Continue? (yes/no): ' user_input
+
+\if :user_input = 'yes'
+  \echo 'You chose to continue.'
+\elif :user_input = 'no'
+  \echo 'You chose to exit.'
+\else
+  \echo 'Invalid input.'
+\endif
+

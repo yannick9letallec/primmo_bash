@@ -1,0 +1,78 @@
+/*
+ * 
+ *
+ *	PSQL as a REPORTing TOOL ! 
+ * 
+ *
+ * COLOCATAIRES :
+	1 - le nombre de colocataire présent actuellement.
+	2 - la liste des colocataires dont le bail est en cours, avec :
+		- montant loyer
+		- montant provisions totale
+		-  montant provisions depuis la dernière régul ( si régul )
+		- actif 
+	SI DES REGULARISATIONS EXISTENT :
+	3 - les régularisation réelles effectuées par locataires
+		Pour chaque régul : 
+			n° régul / date régul / montant régul / type_regul ( intermédiaire, finale réelle, finale forcée ), est_paye
+			Pour chaque type de charge :
+				montant réel sur la période
+				période couverte
+				factures couvertes ( id ou référence factures )
+				Associer régul & type de charge
+	4 - taux occupation moyen		
+		
+	REGULARISATION : 
+	1 - Etat Global : 
+
+
+*/
+\ir ./psql_local_config.psql
+
+-- set d_date as current_date ( ! in psql \set sets litteral vars, \gset sets from queries, \set var `` set from bash command !!! )
+\set  report_name_prefix colocataires
+
+select to_char( current_date, 'YYYY-MM-DD' ) as d_date \gset
+
+\set report_path ./Reports/:report_name_prefix __ :d_date .txt
+
+\! touch :report_path
+\o :report_path
+
+SELECT test.nb_colocataires_present( current_date ) AS nb_colocataires \gset
+
+
+\echo :d_date : :nb_colocataires présnet(s)
+
+-- && :nb_colocataires > 0
+
+SELECT :nb_colocataires > 0 AS locataire_present \gset
+\if :locataire_present
+
+	\C "REPORTING > COLOCATAIRES"
+	\pset null --EC--
+	
+	SELECT 
+		nom AS Nom, 
+		prenom AS "Prénom", 
+		lower( periode_occupation ) AS "Début Bail",
+		CASE 
+			WHEN upper_inf( periode_occupation ) THEN NULL
+			ELSE upper( periode_occupation )
+		END AS "Fin Bail",		
+		loyer_mensuel_hc AS "Loyer HC",
+		provision_charge_mensuelle AS "Provisions",
+		loyer_total AS "Loyer Total",
+		test.total_provisions_payees_a_date  ( c.id ) AS "Total des Provisions Payées",
+		test.total_loyer_payes_hc_a_date ( c.id ) AS "Total Loyer HC Payés",
+		' - ' AS "Provisions non Régularisées"
+	FROM test.locataire c
+	WHERE :'d_date'::date <@ periode_occupation;
+
+	\C "REPORTING > REVENUS COLOCATAIRES"
+	
+\endif 
+
+
+-- restoring defaults psql parameters and exit
+\ir ./psql_restore_config.psql

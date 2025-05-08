@@ -1,0 +1,20 @@
+-- restore default psql config
+
+
+
+\set ON_ERROR_STOP ON
+-- general verbosity mode
+\set ECHO all
+\set VERBOSITY verbose
+\set SHOW_CONTEXT errors
+
+-- Verbosity : apply to error report
+
+-- setting PSQL 'DISPLAY' Parameters
+\pset pager on
+\pset format aligned
+\pset footer on
+\timing ON
+\o 
+
+\q 
