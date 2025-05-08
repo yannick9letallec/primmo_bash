@@ -1,7 +1,7 @@
-SET search_path TO 'test';
+SET search_path TO 'primmo_bash_dev';
 
-CREATE OR REPLACE PROCEDURE test.unit_test_charges_sont_cloturables(  )
-SET search_path TO 'test'
+CREATE OR REPLACE PROCEDURE primmo_bash_dev.unit_test_charges_sont_cloturables(  )
+SET search_path TO 'primmo_bash_dev'
 as $$
  declare
    r locataire%rowtype;
@@ -63,14 +63,14 @@ as $$
    
   	ASSERT charges_sont_cloturables( 2 ) is true, 'KO - Billy Banc ( 2 ) cloturable. Toutes charges présentes.';
   	ASSERT charges_sont_cloturables( 3 ) is false, 'KO - Florentin Huchaud ( 3 ). Non cloturable ( manque facture eau.';
-	--ASSERT test.charges_sont_cloturables( r.id ) is true, 'OK - Denis Rognat ( 2 ) .';
+	--ASSERT primmo_bash_dev.charges_sont_cloturables( r.id ) is true, 'OK - Denis Rognat ( 2 ) .';
 	
  end;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
 
-CREATE OR REPLACE PROCEDURE test.unit_test_calcul_provisions_payees()
-SET search_path TO 'test'
+CREATE OR REPLACE PROCEDURE primmo_bash_dev.unit_test_calcul_provisions_payees()
+SET search_path TO 'primmo_bash_dev'
 as $$
  declare
     r locataire%rowtype;
@@ -104,8 +104,8 @@ end;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
 
-CREATE OR REPLACE PROCEDURE test.unit_test_charges_sont_periodes_fusionnables(  )
-SET search_path TO 'test'
+CREATE OR REPLACE PROCEDURE primmo_bash_dev.unit_test_charges_sont_periodes_fusionnables(  )
+SET search_path TO 'primmo_bash_dev'
 as $$
  declare
  begin
@@ -145,9 +145,9 @@ as $$
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
 
-drop PROCEDURE test.unit_test_regularisation_est_pertinente;
-CREATE OR REPLACE PROCEDURE test.unit_test_regularisation_est_pertinente ()
-SET search_path TO 'test'
+drop PROCEDURE primmo_bash_dev.unit_test_regularisation_est_pertinente;
+CREATE OR REPLACE PROCEDURE primmo_bash_dev.unit_test_regularisation_est_pertinente ()
+SET search_path TO 'primmo_bash_dev'
 as $$
  declare
     r locataire%rowtype;
@@ -293,15 +293,15 @@ as $$
 end;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
 
-call test.unit_test_regularisation_est_pertinente();
+call primmo_bash_dev.unit_test_regularisation_est_pertinente();
 table TEST.COLOCATAIRE ;
 table TEST.CHARGES  ;
 table TEST.ligne_regularisation  ;
-select test.appel_de_charge ( 5 );
+select primmo_bash_dev.appel_de_charge ( 5 );
 
 
-CREATE OR REPLACE PROCEDURE test.unit_test_appel_de_charge()
-SET search_path TO 'test'
+CREATE OR REPLACE PROCEDURE primmo_bash_dev.unit_test_appel_de_charge()
+SET search_path TO 'primmo_bash_dev'
 as $$
  DECLARE
  	v_state  text;
@@ -420,13 +420,13 @@ end;
 $$ LANGUAGE plpgsql SECURITY INVOKER;
 
 
-CREATE OR REPLACE PROCEDURE test.run_tests()
-SET search_path TO 'test'
+CREATE OR REPLACE PROCEDURE primmo_bash_dev.run_tests()
+SET search_path TO 'primmo_bash_dev'
 as $$
  declare
  begin
 	 /*
-	call test.unit_test_charges_sont_cloturables();
+	call primmo_bash_dev.unit_test_charges_sont_cloturables();
 	call unit_test_regularisation_est_pertinente();
 	call unit_test_charges_sont_periodes_fusionnables();
 	call unit_test_calcul_provisions_payees();
@@ -438,21 +438,21 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;
 
 call unit_test_calcul_provisions_payees();
 
-call test.run_tests();
+call primmo_bash_dev.run_tests();
 
 
 
-select test.lire_derniere_date_regul( 5 );
+select primmo_bash_dev.lire_derniere_date_regul( 5 );
 
-select test.calcul_provisions_payees( 5,2, '2024-07-31' );
+select primmo_bash_dev.calcul_provisions_payees( 5,2, '2024-07-31' );
 select calcul_provisions_payees( 5, 3, '2024-10-21' );
 select calcul_provisions_payees( 5, 4 );
 
 
-table test.regularisation ;
-table test.ligne_regularisation ;
-select * from test.locataire;
-select * from test.charges;
+table primmo_bash_dev.regularisation ;
+table primmo_bash_dev.ligne_regularisation ;
+select * from primmo_bash_dev.locataire;
+select * from primmo_bash_dev.charges;
    
 
    	
@@ -469,8 +469,8 @@ DELETE from regularisation where note = 'test';
 update locataire set est_charge_cloturable = false;
 
 
-table test.regularisation ;
-table test.ligne_regularisation ;
+table primmo_bash_dev.regularisation ;
+table primmo_bash_dev.ligne_regularisation ;
 SELECT ts_date_arret FROM ligne_regularisation AS lr 
 WHERE fk_regularisation = (
 	SELECT max( id ) FROM regularisation WHERE fk_locataire = 5

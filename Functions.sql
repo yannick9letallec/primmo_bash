@@ -1,6 +1,6 @@
 -- Extraire la durée du bail
-set search_path to test, public;
-\set env test
+set search_path to primmo_bash_dev, public;
+\set env primmo_bash_dev
 
 
 \ir ./Functions_Helpers.sql
@@ -10,5 +10,5 @@ set search_path to test, public;
 \ir ./Functions_Regularisation.sql
 
 
--- ! IMPORTANT ! FOR SCRIPT  HANDLING ( Next calls only serving dev / test purposes )
+-- ! IMPORTANT ! FOR SCRIPT  HANDLING ( Next calls only serving dev / primmo_bash_dev purposes )
 \q

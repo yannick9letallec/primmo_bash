@@ -230,7 +230,7 @@ case $DOMAINE in
 					type_charge=9999 # charges individuelles
 				else
 					mode_charge=collectif
-					type_charge=$( psql -U $USER -d $DB --csv -t -c "select concat( label, ':', t.id ) from test.type_charge as t join ( select unnest( string_to_array( config -> 'charges_obligatoires', ',' ) )::integer id from test.bien b where id = ${prop_id} ) as b on t.id = b.id" | gum choose --header="Choisissez le type de charge collective à ajouter :" --label-delimiter=":")
+					type_charge=$( psql -U $USER -d $DB --csv -t -c "select concat( label, ':', t.id ) from ${SCHEMA}.type_charge as t join ( select unnest( string_to_array( config -> 'charges_obligatoires', ',' ) )::integer id from primmo_bash_dev.bien b where id = ${prop_id} ) as b on t.id = b.id" | gum choose --header="Choisissez le type de charge collective à ajouter :" --label-delimiter=":")
 
 				fi
 

@@ -4,11 +4,11 @@
  * 	nb jours loués par an / total
  */
 
-DROP FUNCTION IF EXISTS test.colocation_calculer_taux_occupation_annuel;
+DROP FUNCTION IF EXISTS primmo_bash_dev.colocation_calculer_taux_occupation_annuel;
 -- default to brut ( calcul en année pleine )
 -- TODO :
 	-- gestion du nb de colocataire au dela de la date du jour
-CREATE OR REPLACE FUNCTION test.colocation_calculer_taux_occupation_annuel( id_actif int, net boolean = false)
+CREATE OR REPLACE FUNCTION primmo_bash_dev.colocation_calculer_taux_occupation_annuel( id_actif int, net boolean = false)
 RETURNS table( annee text, tx_occupation NUMERIC ) AS
 $$
  declare
@@ -29,7 +29,7 @@ $$
 	raise notice 'FONCTION : calculer_taux_occupation';
 
 	jour_actuel = current_date;
-	annee_min = ( select extract( year from ( min( lower( periode_occupation )))) from test.locataire );
+	annee_min = ( select extract( year from ( min( lower( periode_occupation )))) from primmo_bash_dev.locataire );
 	
 	-- preferer today / current_date ?
 		-- annee_max = ( select extract( year from ( max( upper( periode_occupation )))) from locataire );
@@ -56,7 +56,7 @@ $$
 			nb_colocataires_jour = ( select count(*) from locataire where jours_en_cours <@ periode_occupation::daterange );
 			raise notice 'Jours en cours : %,  NB Colocataires Jours : %, NB Colocataires Réels : %, NB Colocaaires Max : %', jours_en_cours, nb_colocataires_jour, nb_colocataire_reel_sur_annee, nb_colocataire_max_sur_annee;
 
-			nb_colocataire_reel_sur_annee = ( nb_colocataire_reel_sur_annee + test.nb_colocataires_present( jours_en_cours ));
+			nb_colocataire_reel_sur_annee = ( nb_colocataire_reel_sur_annee + primmo_bash_dev.nb_colocataires_present( jours_en_cours ));
  			nb_colocataire_max_sur_annee = ( nb_colocataire_max_sur_annee + nb_actifs );
 
 			taux_occupation = ( nb_colocataire_reel_sur_annee::numeric / nb_colocataire_max_sur_annee::numeric ) * 100;
@@ -95,12 +95,12 @@ $$
 	return;
  end
 $$
-LANGUAGE plpgsql SET search_path TO 'test' SECURITY DEFINER;
--- SELECT * FROM test.colocation_calculer_taux_occupation_annuel( 1 );
+LANGUAGE plpgsql SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
+-- SELECT * FROM primmo_bash_dev.colocation_calculer_taux_occupation_annuel( 1 );
 
 
-DROP FUNCTION IF EXISTS test.actif_nb_baux( int );
-CREATE OR REPLACE FUNCTION test.actif_nb_baux ( id_bien int = 1 )
+DROP FUNCTION IF EXISTS primmo_bash_dev.actif_nb_baux( int );
+CREATE OR REPLACE FUNCTION primmo_bash_dev.actif_nb_baux ( id_bien int = 1 )
 RETURNS table( id_bien int, id_actif int, LABEL TEXT, nb_baux int ) AS
 $$
 	select 
@@ -108,27 +108,27 @@ $$
 		a.id as id_actif, 
 		a.label,
 		count( periode_occupation ) over ( partition by a.id ) as nb_baux
-	from test.locataire c
-	right outer join test.actif a on c.fk_actif = a.id
+	from primmo_bash_dev.locataire c
+	right outer join primmo_bash_dev.actif a on c.fk_actif = a.id
 	where a.fk_bien = id_bien
 	order by a.id asc, nb_baux desc;
 $$
-LANGUAGE SQL SET search_path TO 'test' SECURITY DEFINER;
-SELECT * FROM test.actif_nb_baux();
+LANGUAGE SQL SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
+SELECT * FROM primmo_bash_dev.actif_nb_baux();
 
 
 /*
-DROP FUNCTION IF EXISTS test.bien_bilan_occupation;
-CREATE OR REPLACE FUNCTION test.bien_bilan_occupation( )
+DROP FUNCTION IF EXISTS primmo_bash_dev.bien_bilan_occupation;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.bien_bilan_occupation( )
 RETURNS table( chambre_id int, vacances datemultirange ) AS
 $$
  
 $$
-LANGUAGE sql SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE sql SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 */
 
-DROP FUNCTION IF EXISTS test.actif_periodes_vacance;
-CREATE OR REPLACE FUNCTION test.actif_periodes_vacance( id_bien int DEFAULT 1 )
+DROP FUNCTION IF EXISTS primmo_bash_dev.actif_periodes_vacance;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.actif_periodes_vacance( id_bien int DEFAULT 1 )
 RETURNS table( chambre_id int, vacances datemultirange ) AS
 $$
  declare
@@ -141,7 +141,7 @@ $$
  begin
 	raise notice 'FONCTION : periodes_vacance';
 	
-	mise_en_service = ( select t.mise_en_service from test.bien t where t.id = 1 );
+	mise_en_service = ( select t.mise_en_service from primmo_bash_dev.bien t where t.id = 1 );
 	borne_superieure = date( '9999-12-31' );
 	periode_activite = datemultirange( daterange( mise_en_service, borne_superieure, '[)' ));
 	raise notice 'periode activite: %', periode_activite;	
@@ -156,14 +156,14 @@ $$
 				else 
 					periode_occupation
 				end as po
-			from test.locataire c
-			right outer join test.actif a on c.fk_actif = a.id
+			from primmo_bash_dev.locataire c
+			right outer join primmo_bash_dev.actif a on c.fk_actif = a.id
 			where a.fk_bien = id_bien
 			order by a.id
 		) select
 				p.id,
 				range_agg( p.po ) as baux_agg
-			from test.locataire c 
+			from primmo_bash_dev.locataire c 
 			right outer join periodes_locatives_par_chambre p on p.id = c.fk_actif
 			group by ( p.id )
 			order by baux_agg
@@ -185,5 +185,5 @@ $$
 	return;
  end
 $$
-LANGUAGE plpgsql SET search_path TO 'test' SECURITY DEFINER;
---SELECT * FROM test.actif_periodes_vacance( );
+LANGUAGE plpgsql SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
+--SELECT * FROM primmo_bash_dev.actif_periodes_vacance( );

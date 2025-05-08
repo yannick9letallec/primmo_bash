@@ -1,26 +1,26 @@
-SET search_path TO test, public;
+SET search_path TO primmo_bash_dev, public;
 
-select * FROM test.appel_de_charge( 9, est_reelle => false );
-select * FROM test.appel_de_charge_reel( 9 );
-SELECT test.regularisation_est_presente( 7 );
-SELECT test.regularisation_est_pertinente( 7 );
+select * FROM primmo_bash_dev.appel_de_charge( 9, est_reelle => false );
+select * FROM primmo_bash_dev.appel_de_charge_reel( 9 );
+SELECT primmo_bash_dev.regularisation_est_presente( 7 );
+SELECT primmo_bash_dev.regularisation_est_pertinente( 7 );
 
 
-truncate test.regularisation cascade;
-truncate test.ligne_regularisation cascade;
-truncate test.charges RESTART IDENTITY CASCADE ;
-truncate test.locataire cascade;
+truncate primmo_bash_dev.regularisation cascade;
+truncate primmo_bash_dev.ligne_regularisation cascade;
+truncate primmo_bash_dev.charges RESTART IDENTITY CASCADE ;
+truncate primmo_bash_dev.locataire cascade;
 
-table test.locataire;
-table test.charges;
-table test.type_charge;
-table test.regularisation;
-table test.regularisation_statut;
-table test.ligne_regularisation;
-table test.ligne_regularisation_type;
+table primmo_bash_dev.locataire;
+table primmo_bash_dev.charges;
+table primmo_bash_dev.type_charge;
+table primmo_bash_dev.regularisation;
+table primmo_bash_dev.regularisation_statut;
+table primmo_bash_dev.ligne_regularisation;
+table primmo_bash_dev.ligne_regularisation_type;
 
-DELETE FROM test.regularisation WHERE id=27;
-update test.locataire SET est_charge_cloturable = FALSE, est_charge_cloture = FALSE WHERE id = 1 ;
+DELETE FROM primmo_bash_dev.regularisation WHERE id=27;
+update primmo_bash_dev.locataire SET est_charge_cloturable = FALSE, est_charge_cloture = FALSE WHERE id = 1 ;
 
 select regularisation_est_presente( 1 );
 select calcul_provisions_payees( 6 );
@@ -30,24 +30,24 @@ select date_fin_bail ( 2 );
 select nb_locataires_present( '2024-05-25' );
 select appel_de_charge( 1, true, 1200 );
 select appel_de_charge( 5, true, 1200 );
-select test.regularisation_est_pertinente( 7 );
+select primmo_bash_dev.regularisation_est_pertinente( 7 );
 
-select test.regularisation_creer_pour_locataire( 9 );
+select primmo_bash_dev.regularisation_creer_pour_locataire( 9 );
 
 
-SELECT test.periodes_vacance();
+SELECT primmo_bash_dev.periodes_vacance();
 
-SELECT * FROM test.periodes_vacance() p
-INNER JOIN test.actif_nb_baux() n 
+SELECT * FROM primmo_bash_dev.periodes_vacance() p
+INNER JOIN primmo_bash_dev.actif_nb_baux() n 
 ON p.chambre_id = n.id_bien;
 
-SELECT chambre_id, unnest( vacances ) FROM test.periodes_vacance() p;
+SELECT chambre_id, unnest( vacances ) FROM primmo_bash_dev.periodes_vacance() p;
 
 SELECT 
 	*,
 	( NB_jours_commun::numeric( 10, 2 ) / NB_jours_total::numeric( 10, 2 ) )::NUMERIC( 10, 4 ) * 100 AS pourcentage_effectif
 	--, ntile( 3 ) OVER ( PARTITION BY NB_jours_commun ORDER BY NB_jours_commun ASC ) AS "WF" // add a window function ?
-from test.bilan_occupation( 7 ) AS ( NB_jours_total int, effectif int, NB_jours_commun int )
+from primmo_bash_dev.bilan_occupation( 7 ) AS ( NB_jours_total int, effectif int, NB_jours_commun int )
 ORDER BY pourcentage_effectif DESC, effectif asc;
 
 SELECT upper( periode ) FROM charges WHERE fk_type_charge = 1;
@@ -148,8 +148,8 @@ TABLE locataire;
 TABLE charges;
 TABLE regularisation;
 TABLE ligne_regularisation;
-select test.charges_sont_cloturables( 2 );
-select test.regularisation_est_pertinente( 1 );
+select primmo_bash_dev.charges_sont_cloturables( 2 );
+select primmo_bash_dev.regularisation_est_pertinente( 1 );
 SELECT EXISTS ( SELECT id FROM locataire AS c WHERE id = 1 );
    
 
@@ -178,7 +178,7 @@ select lo_import( 'CHARGES/Scripts/TEST/Files/GAZ/1448084050842905154.jpg' );
 @set periode_fin='2026-01-31'
 
 
-INSERT INTO test.charges ( fk_type_charge, date_emission, periode, montant, note ) VALUES ( ${type_charge}, ${date_emission}, daterange( ${periode_debut}, ${periode_fin}, '[)' ), ${montant}, ${COMMENT} );
+INSERT INTO primmo_bash_dev.charges ( fk_type_charge, date_emission, periode, montant, note ) VALUES ( ${type_charge}, ${date_emission}, daterange( ${periode_debut}, ${periode_fin}, '[)' ), ${montant}, ${COMMENT} );
 
 
  '${periode_debut}'::date, '${periode_fin}'::date 
@@ -191,9 +191,9 @@ INSERT INTO test.charges ( fk_type_charge, date_emission, periode, montant, note
 	upper( periode_occupation ) AS "Fin Bail",
 	montant_caution AS "Montant Caution",
 	provision_charge_mensuelle AS "Provision Mensuelle",
-	test.total_provisions_payees_a_date( id )::money AS "Total Provisions Payées",
-	test.total_loyer_payes_hc_a_date( id )::money AS "Total Loyers Payés",
-	test.verbose_duration_bail( id ) AS "Durée du Bail",
+	primmo_bash_dev.total_provisions_payees_a_date( id )::money AS "Total Provisions Payées",
+	primmo_bash_dev.total_loyer_payes_hc_a_date( id )::money AS "Total Loyers Payés",
+	primmo_bash_dev.verbose_duration_bail( id ) AS "Durée du Bail",
 	est_charge_cloturable AS  "Charges Cloturables ?", 
 	est_charge_cloture AS "Charges Cloturées ?"
 FROM
@@ -207,22 +207,22 @@ ORDER BY lower( periode_occupation );
 EXPLAIN SELECT 
 	*,
 	( NB_jours_commun::numeric( 10, 2 ) / NB_jours_total::numeric( 10, 2 ) )::NUMERIC( 10, 2 ) * 100 AS pourcentage
-from test.bilan_occupation( 1 ) AS ( NB_jours_total int, effectif int, NB_jours_commun int )
+from primmo_bash_dev.bilan_occupation( 1 ) AS ( NB_jours_total int, effectif int, NB_jours_commun int )
 ORDER BY pourcentage DESC, effectif asc;
  
  
-UPDATE test.locataire SET periode_occupation = daterange( lower( periode_occupation ), NULL, '[)' ) WHERE id = 10;
-UPDATE test.locataire SET periode_occupation = daterange( lower( periode_occupation ), '2025-05-01', '[)' ) WHERE id = 10;
-UPDATE test.locataire SET periode_occupation = daterange( lower( periode_occupation ), '2025-04-01', '[)' ) WHERE id = 10;
+UPDATE primmo_bash_dev.locataire SET periode_occupation = daterange( lower( periode_occupation ), NULL, '[)' ) WHERE id = 10;
+UPDATE primmo_bash_dev.locataire SET periode_occupation = daterange( lower( periode_occupation ), '2025-05-01', '[)' ) WHERE id = 10;
+UPDATE primmo_bash_dev.locataire SET periode_occupation = daterange( lower( periode_occupation ), '2025-04-01', '[)' ) WHERE id = 10;
 
-SELECT nom, prenom, periode_occupation, note FROM test.locataire WHERE id = 10;
+SELECT nom, prenom, periode_occupation, note FROM primmo_bash_dev.locataire WHERE id = 10;
 SELECT  '2025-04-01'::date > current_date; 
 
 
 elect config -> 'bailleur_adresse' as ad                                                                                                                                                                                          │
-                        from test.locataire l                                                                                                                                                                                               │
-                        inner join test.actif a on l.fk_actif = a.id                                                                                                                                                                        │
-                inner join test.bien b on a.fk_bien = b.id                                                                                                                                                                                  │
+                        from primmo_bash_dev.locataire l                                                                                                                                                                                               │
+                        inner join primmo_bash_dev.actif a on l.fk_actif = a.id                                                                                                                                                                        │
+                inner join primmo_bash_dev.bien b on a.fk_bien = b.id                                                                                                                                                                                  │
                 where l.id = 10;                                                                                                                                                                                                            │
 
 DO 
@@ -237,16 +237,16 @@ select config -> 'bailleur_adresse' as ad,
 config -> 'quittance_lieux' as ql,
 config -> 'bailleur_denomination_sociale' as db
 into a, b, c
-from test.locataire l
-inner join test.actif a on l.fk_actif = a.id
-inner join test.bien b on a.fk_bien = b.id
+from primmo_bash_dev.locataire l
+inner join primmo_bash_dev.actif a on l.fk_actif = a.id
+inner join primmo_bash_dev.bien b on a.fk_bien = b.id
 where l.id = 10;  
 
 raise notice '%, %, %', a, b, c;
 END $$;
 
-DROP FUNCTION IF EXISTS test.a_virer(  ) CASCADE;
-CREATE OR REPLACE FUNCTION test.a_virer( )
+DROP FUNCTION IF EXISTS primmo_bash_dev.a_virer(  ) CASCADE;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.a_virer( )
 RETURNS void AS
 $$
 declare 
@@ -258,19 +258,19 @@ begin
 	config -> 'quittance_lieux' as ql,
 	config -> 'bailleur_denomination_sociale' as db
 	into a, b, c
-	from test.locataire l
-	inner join test.actif a on l.fk_actif = a.id
-	inner join test.bien b on a.fk_bien = b.id
+	from primmo_bash_dev.locataire l
+	inner join primmo_bash_dev.actif a on l.fk_actif = a.id
+	inner join primmo_bash_dev.bien b on a.fk_bien = b.id
 	where l.id = 10;  
 	
 	raise notice '%, %, %', a, b, c;
 END 
 $$
-LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 reset search_path;
 
 
-CREATE OR REPLACE procedure test.a_virer( )
+CREATE OR REPLACE procedure primmo_bash_dev.a_virer( )
 AS
 $$
 declare 
@@ -282,9 +282,9 @@ begin
 	config -> 'quittance_lieux' as ql,
 	config -> 'bailleur_denomination_sociale' as db
 	into a, b, c
-	from test.locataire l
-	inner join test.actif a on l.fk_actif = a.id
-	inner join test.bien b on a.fk_bien = b.id
+	from primmo_bash_dev.locataire l
+	inner join primmo_bash_dev.actif a on l.fk_actif = a.id
+	inner join primmo_bash_dev.bien b on a.fk_bien = b.id
 	where l.id = 10;  
 	
 	raise notice '%, %, %', a, b, c;
@@ -292,7 +292,7 @@ END
 $$
 LANGUAGE plpgsql;
 reset search_path;
-CALL test.a_virer();
+CALL primmo_bash_dev.a_virer();
 
 
 WITH loc AS (
@@ -302,8 +302,8 @@ WITH loc AS (
 		prenom,
 		count( q.id ) nb_quittance,
 		max( q.periode_couverte )  derniere_quittance
-	from test.locataire l
-	LEFT OUTER JOIN test.quittance q
+	from primmo_bash_dev.locataire l
+	LEFT OUTER JOIN primmo_bash_dev.quittance q
 	ON q.fk_locataire = l.id
 	GROUP BY l.id
 	order by id
@@ -313,9 +313,9 @@ WITH loc AS (
 	CASE WHEN nb_quittance = 0 THEN 
 		'QUITTANCABLE ! Aucune Quittance trouvée'
 	ELSE 
-		CASE WHEN test.quittance_periode_arret( l.id ) = derniere_quittance THEN 
+		CASE WHEN primmo_bash_dev.quittance_periode_arret( l.id ) = derniere_quittance THEN 
 				concat( 'A jour. ', 'NB Quittance(s) : ', nb_quittance )
-			WHEN test.quittance_periode_arret( l.id ) > derniere_quittance THEN
+			WHEN primmo_bash_dev.quittance_periode_arret( l.id ) > derniere_quittance THEN
 				concat( 'QUITTANCABLE !. NB Quittance(s) : ', nb_quittance, '. Dernière en date : ', derniere_quittance )
 			ELSE
 				'Functionnal Error. Improvable Business Rule  Design'
@@ -324,7 +324,7 @@ WITH loc AS (
 FROM loc l;
 
 			
-SELECT test.quittance_periode_arret( 1 )
+SELECT primmo_bash_dev.quittance_periode_arret( 1 )
 
 SELECT to_char( '2025-04-01'::date, 'YYYY-MM' ) 
 

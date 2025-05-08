@@ -1,13 +1,13 @@
 -- SQL
-set search_path to test, public;
+set search_path to primmo_bash_dev, public;
 
 -- psql
-\set env test
+\set env primmo_bash_dev
 
 \echo :env
 
-DROP FUNCTION IF EXISTS test.f_trg_charges_insert CASCADE;
-CREATE OR REPLACE FUNCTION test.f_trg_charges_insert()
+DROP FUNCTION IF EXISTS primmo_bash_dev.f_trg_charges_insert CASCADE;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.f_trg_charges_insert()
 RETURNS TRIGGER as $$
  DECLARE
   r locataire%rowtype;
@@ -65,12 +65,12 @@ RETURNS TRIGGER as $$
    RETURN NEW;
  END
 $$ 
-LANGUAGE plpgsql SET search_path TO test SECURITY DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 COMMENT ON FUNCTION :env.f_trg_charges_insert IS 'TRIGGER qui s''assure de la bonne adjacence des périodes de factures lors de l''ajout d''une nouvelle charge. ET qui s''occupe de mettre à jour l''aspect CLOTURABILITE des charges du locataire';
 
 
 DROP FUNCTION IF EXISTS :env.f_trg_charges_map_lo CASCADE;
-CREATE OR REPLACE FUNCTION test.f_trg_charges_map_lo()
+CREATE OR REPLACE FUNCTION primmo_bash_dev.f_trg_charges_map_lo()
 RETURNS TRIGGER as $$
  DECLARE
   base_path text := 'CHARGES/Scripts/TEST/Files/';
@@ -128,12 +128,12 @@ RETURNS TRIGGER as $$
    RETURN new;
  END
 $$
-LANGUAGE plpgsql SET search_path TO test SECURITY DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 COMMENT ON FUNCTION :env.f_trg_charges_map_lo IS 'TRIGGER qui (auto) upload le fichier d''une facture dans un lo;';
 
 
 DROP FUNCTION IF EXISTS :env.f_trg_locataire_update CASCADE;
-CREATE OR REPLACE FUNCTION test.f_trg_locataire_update()
+CREATE OR REPLACE FUNCTION primmo_bash_dev.f_trg_locataire_update()
 RETURNS TRIGGER as $$
  DECLARE
 --  
@@ -157,7 +157,7 @@ RETURNS TRIGGER as $$
 
  END
 $$ 
-LANGUAGE plpgsql SET search_path TO test SECURITY DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 COMMENT ON FUNCTION :env.f_trg_locataire_update IS 'TODO ';
 
 
@@ -194,7 +194,7 @@ CREATE OR REPLACE TRIGGER trg_charges_before_insert
 BEFORE INSERT ON :env.charges
 FOR EACH ROW EXECUTE FUNCTION :env.f_trg_charges_insert();
 -- will call :
-  -- test_est_cloturable
+  -- primmo_bash_dev_est_cloturable
   -- do th e cloture
 
 DROP TRIGGER IF EXISTS trg_charges_lo_insert ON :env.charges;

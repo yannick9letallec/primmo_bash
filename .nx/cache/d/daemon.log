@@ -1,0 +1,817 @@
+[NX Daemon Server] - 2024-01-13T16:30:23.315Z - Started listening on: /tmp/85861e960fa80f249ccb/d.sock
+[NX Daemon Server] - 2024-01-13T16:30:23.317Z - [WATCHER]: Subscribed to changes within: /home/yannickletallec/Documents/IMMO-APP/CODE (native)
+[NX Daemon Server] - 2024-01-13T16:30:23.326Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-13T16:30:23.328Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-01-13T16:30:23.331Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-01-13T16:30:23.332Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-01-13T16:30:23.552Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T16:30:23.553Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T16:30:23.553Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T16:30:24.071Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-01-13T16:30:24.073Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-01-13T16:30:24.073Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 739. Response time: 2.
+[NX Daemon Server] - 2024-01-13T16:30:24.074Z - Time taken for 'total for creating and serializing project graph' 738.9574350006878ms
+[NX Daemon Server] - 2024-01-13T16:30:24.211Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-01-13T16:44:38.042Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-13T16:44:38.048Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T16:44:38.149Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T16:44:38.149Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-13T16:44:38.149Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T16:44:38.230Z - Time taken for 'hash changed files from watcher' 0.31957099959254265ms
+[NX Daemon Server] - 2024-01-13T16:52:55.593Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T16:52:55.598Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T16:52:55.798Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T16:52:55.798Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T16:52:55.798Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.html
+[NX Daemon Server] - 2024-01-13T16:52:55.816Z - Time taken for 'hash changed files from watcher' 0.09013600274920464ms
+[NX Daemon Server] - 2024-01-13T16:52:56.076Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-13T16:52:56.077Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T16:52:56.477Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T16:52:56.477Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-13T16:52:56.477Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T16:52:56.505Z - Time taken for 'hash changed files from watcher' 0.2290710024535656ms
+[NX Daemon Server] - 2024-01-13T16:53:55.578Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T16:53:55.579Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T16:53:56.379Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T16:53:56.379Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T16:53:56.379Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T16:53:56.384Z - Time taken for 'hash changed files from watcher' 0.08885499835014343ms
+[NX Daemon Server] - 2024-01-13T16:54:12.537Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T16:54:12.537Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T16:54:14.141Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T16:54:14.142Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T16:54:14.142Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T16:54:14.160Z - Time taken for 'hash changed files from watcher' 0.4151039980351925ms
+[NX Daemon Server] - 2024-01-13T16:54:32.727Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T16:54:32.728Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T16:54:35.932Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T16:54:35.932Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T16:54:35.932Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T16:54:35.942Z - Time taken for 'hash changed files from watcher' 0.29513100162148476ms
+[NX Daemon Server] - 2024-01-13T17:05:07.634Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-01-13T17:05:07.635Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:07.716Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:07.717Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:07.735Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:05:07.735Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.swp
+[NX Daemon Server] - 2024-01-13T17:05:07.736Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.swpx
+[NX Daemon Server] - 2024-01-13T17:05:07.796Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:07.796Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:07.797Z - Time taken for 'hash changed files from watcher' 0.671849999576807ms
+[NX Daemon Server] - 2024-01-13T17:05:07.904Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:07.905Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:07.969Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:07.971Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:07.997Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:05:07.997Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.swp
+[NX Daemon Server] - 2024-01-13T17:05:07.997Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:05:08.002Z - Time taken for 'hash changed files from watcher' 0.19353900104761124ms
+[NX Daemon Server] - 2024-01-13T17:05:08.039Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.040Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.220Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.221Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.287Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.288Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.363Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.364Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.441Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:05:08.441Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.swp
+[NX Daemon Server] - 2024-01-13T17:05:08.441Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:05:08.457Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.458Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.459Z - Time taken for 'hash changed files from watcher' 0.5808940008282661ms
+[NX Daemon Server] - 2024-01-13T17:05:08.538Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.539Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.612Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.614Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.699Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.700Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.763Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.763Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.828Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.830Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.898Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.899Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:08.979Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:08.980Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.048Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.048Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.124Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.126Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.189Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.190Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.256Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.256Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.259Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:05:09.259Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.swp
+[NX Daemon Server] - 2024-01-13T17:05:09.259Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:05:09.271Z - Time taken for 'hash changed files from watcher' 0.488780003041029ms
+[NX Daemon Server] - 2024-01-13T17:05:09.355Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.356Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.430Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.430Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.495Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.496Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.555Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.556Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.635Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.636Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.712Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.714Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.773Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.773Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.855Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.855Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:09.965Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:09.965Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.030Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.031Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.097Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.097Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.155Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.156Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.221Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.221Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.306Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.306Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.382Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.383Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.456Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.456Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.521Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.522Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.579Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.580Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.645Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.648Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.710Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.711Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.787Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.787Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.856Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.856Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.945Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:10.945Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:10.956Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:05:10.957Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.swp
+[NX Daemon Server] - 2024-01-13T17:05:10.957Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:05:10.968Z - Time taken for 'hash changed files from watcher' 0.42097799852490425ms
+[NX Daemon Server] - 2024-01-13T17:05:11.004Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.005Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.080Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.081Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.164Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.165Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.237Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.238Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.329Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.329Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.414Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.414Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.496Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.497Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.563Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.565Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.621Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.623Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.710Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.710Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.790Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.791Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.862Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:11.864Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.928Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:11.928Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:14.208Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:05:14.208Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.swp
+[NX Daemon Server] - 2024-01-13T17:05:14.208Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:05:14.219Z - Time taken for 'hash changed files from watcher' 0.4583300016820431ms
+[NX Daemon Server] - 2024-01-13T17:05:17.455Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was modified
+[NX Daemon Server] - 2024-01-13T17:05:17.456Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:21.065Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.swp was deleted
+[NX Daemon Server] - 2024-01-13T17:05:21.066Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:05:23.859Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:05:23.860Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:05:23.860Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.swp
+[NX Daemon Server] - 2024-01-13T17:05:23.871Z - Time taken for 'hash changed files from watcher' 0.34463000297546387ms
+[NX Daemon Server] - 2024-01-13T17:22:59.506Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX Daemon Server] - 2024-01-13T17:22:59.516Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:22:59.572Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:22:59.573Z - [WATCHER]: 2 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T17:22:59.647Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:22:59.647Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.app.component.html.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.sass.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.ts.swp
+[NX Daemon Server] - 2024-01-13T17:22:59.648Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.app.component.html.swx,FRONT-ENDS/projects/primmo/src/app/.app.component.sass.swx,FRONT-ENDS/projects/primmo/src/app/.app.component.ts.swx
+[NX Daemon Server] - 2024-01-13T17:22:59.674Z - Time taken for 'hash changed files from watcher' 31.502771001309156ms
+[NX Daemon Server] - 2024-01-13T17:23:03.666Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-13T17:23:03.667Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:23:03.869Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:23:03.869Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.app.component.html.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.sass.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.ts.swp
+[NX Daemon Server] - 2024-01-13T17:23:03.869Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:23:03.881Z - Time taken for 'hash changed files from watcher' 0.7263269983232021ms
+[NX Daemon Server] - 2024-01-13T17:23:11.276Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.app.component.html.swp was deleted
+[NX Daemon Server] - 2024-01-13T17:23:11.277Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:23:11.677Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:23:11.678Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:23:11.678Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.app.component.html.swp
+[NX Daemon Server] - 2024-01-13T17:23:11.689Z - Time taken for 'hash changed files from watcher' 0.34791800007224083ms
+[NX Daemon Server] - 2024-01-13T17:23:12.082Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.app.component.sass.swp was deleted
+[NX Daemon Server] - 2024-01-13T17:23:12.082Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:23:12.810Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/.app.component.ts.swp was deleted
+[NX Daemon Server] - 2024-01-13T17:23:12.810Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:23:12.882Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:23:12.883Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:23:12.883Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.app.component.sass.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.ts.swp
+[NX Daemon Server] - 2024-01-13T17:23:12.886Z - Time taken for 'hash changed files from watcher' 0.09987200051546097ms
+[NX Daemon Server] - 2024-01-13T17:23:23.949Z - [WATCHER]: 3 file(s) created or restored, 0 file(s) modified, 3 file(s) deleted
+[NX Daemon Server] - 2024-01-13T17:23:23.949Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:23:24.050Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:23:24.051Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.app.component.html.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.sass.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.ts.swp
+[NX Daemon Server] - 2024-01-13T17:23:24.051Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.app.component.html.swx,FRONT-ENDS/projects/primmo/src/app/.app.component.sass.swx,FRONT-ENDS/projects/primmo/src/app/.app.component.ts.swx
+[NX Daemon Server] - 2024-01-13T17:23:24.057Z - Time taken for 'hash changed files from watcher' 0.7045149989426136ms
+[NX Daemon Server] - 2024-01-13T17:23:28.041Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:23:28.042Z - [WATCHER]: 0 file(s) created or restored, 3 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-13T17:23:28.244Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:23:28.244Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.app.component.html.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.ts.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.sass.swp
+[NX Daemon Server] - 2024-01-13T17:23:28.244Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:23:28.258Z - Time taken for 'hash changed files from watcher' 1.025101002305746ms
+[NX Daemon Server] - 2024-01-13T17:23:56.070Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 3 file(s) deleted
+[NX Daemon Server] - 2024-01-13T17:23:56.071Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T17:23:56.472Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T17:23:56.472Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T17:23:56.473Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/.app.component.sass.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.ts.swp,FRONT-ENDS/projects/primmo/src/app/.app.component.html.swp
+[NX Daemon Server] - 2024-01-13T17:23:56.477Z - Time taken for 'hash changed files from watcher' 0.17703400179743767ms
+[NX Daemon Server] - 2024-01-13T19:14:53.475Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:14:53.491Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:14:54.295Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:14:54.295Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:14:54.295Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:14:54.355Z - Time taken for 'hash changed files from watcher' 2.752625998109579ms
+[NX Daemon Server] - 2024-01-13T19:15:13.296Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:15:13.299Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:15:14.899Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:15:14.899Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:15:14.900Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T19:15:14.909Z - Time taken for 'hash changed files from watcher' 0.23418999835848808ms
+[NX Daemon Server] - 2024-01-13T19:16:35.546Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:16:35.547Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:16:38.750Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:16:38.751Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:16:38.751Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T19:16:38.769Z - Time taken for 'hash changed files from watcher' 0.28330499678850174ms
+[NX Daemon Server] - 2024-01-13T19:17:22.968Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:17:22.968Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:17:29.374Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:17:29.375Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:17:29.375Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:17:29.380Z - Time taken for 'hash changed files from watcher' 0.4213070012629032ms
+[NX Daemon Server] - 2024-01-13T19:19:13.170Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:19:13.170Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:19:19.577Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:19:19.577Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:19:19.577Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T19:19:19.585Z - Time taken for 'hash changed files from watcher' 0.20544399693608284ms
+[NX Daemon Server] - 2024-01-13T19:20:16.357Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:20:16.358Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:20:22.765Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:20:22.765Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:20:22.765Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:20:22.770Z - Time taken for 'hash changed files from watcher' 0.3119700029492378ms
+[NX Daemon Server] - 2024-01-13T19:20:57.630Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:20:57.631Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:21:04.039Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:21:04.039Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:21:04.039Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:21:04.053Z - Time taken for 'hash changed files from watcher' 0.47031600028276443ms
+[NX Daemon Server] - 2024-01-13T19:22:43.872Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:22:43.872Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:22:50.279Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:22:50.280Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:22:50.280Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:22:50.290Z - Time taken for 'hash changed files from watcher' 0.2797260023653507ms
+[NX Daemon Server] - 2024-01-13T19:23:05.991Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:23:05.991Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:23:12.398Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:23:12.399Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:23:12.399Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:23:12.409Z - Time taken for 'hash changed files from watcher' 0.2673470005393028ms
+[NX Daemon Server] - 2024-01-13T19:24:57.341Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:24:57.342Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:25:03.748Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:25:03.749Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:25:03.749Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:25:03.789Z - Time taken for 'hash changed files from watcher' 0.48166000097990036ms
+[NX Daemon Server] - 2024-01-13T19:25:15.282Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:25:15.282Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:25:21.689Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:25:21.689Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:25:21.690Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:25:21.699Z - Time taken for 'hash changed files from watcher' 0.2749140001833439ms
+[NX Daemon Server] - 2024-01-13T19:25:56.461Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:25:56.462Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:26:02.869Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:26:02.870Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:26:02.870Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:26:02.890Z - Time taken for 'hash changed files from watcher' 0.4246399998664856ms
+[NX Daemon Server] - 2024-01-13T19:26:06.819Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:26:06.819Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:26:13.227Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:26:13.227Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:26:13.228Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T19:26:13.238Z - Time taken for 'hash changed files from watcher' 0.6233280003070831ms
+[NX Daemon Server] - 2024-01-13T19:26:16.812Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:26:16.812Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:26:23.219Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:26:23.219Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:26:23.219Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T19:26:23.233Z - Time taken for 'hash changed files from watcher' 0.33163099735975266ms
+[NX Daemon Server] - 2024-01-13T19:26:30.835Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:26:30.835Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:26:37.241Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:26:37.242Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:26:37.242Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T19:26:37.248Z - Time taken for 'hash changed files from watcher' 0.3251500017940998ms
+[NX Daemon Server] - 2024-01-13T19:29:28.953Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:29:28.953Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:29:35.360Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:29:35.361Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:29:35.361Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/4913,FRONT-ENDS/projects/primmo/src/styles.sass
+[NX Daemon Server] - 2024-01-13T19:29:35.371Z - Time taken for 'hash changed files from watcher' 0.5145209990441799ms
+[NX Daemon Server] - 2024-01-13T19:29:58.674Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:29:58.675Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:30:05.081Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:30:05.081Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:30:05.081Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T19:30:05.087Z - Time taken for 'hash changed files from watcher' 0.1458599977195263ms
+[NX Daemon Server] - 2024-01-13T19:42:09.805Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T19:42:09.805Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T19:42:16.213Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T19:42:16.213Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T19:42:16.213Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/styles.sass,FRONT-ENDS/projects/primmo/src/4913
+[NX Daemon Server] - 2024-01-13T19:42:16.277Z - Time taken for 'hash changed files from watcher' 0.5484699979424477ms
+[NX Daemon Server] - 2024-01-13T20:29:52.892Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T20:29:52.892Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:29:59.299Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T20:29:59.299Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T20:29:59.300Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/styles.sass,FRONT-ENDS/projects/primmo/src/4913
+[NX Daemon Server] - 2024-01-13T20:29:59.373Z - Time taken for 'hash changed files from watcher' 0.3420180007815361ms
+[NX Daemon Server] - 2024-01-13T20:35:33.042Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T20:35:33.043Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:35:39.450Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T20:35:39.451Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T20:35:39.451Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T20:35:39.463Z - Time taken for 'hash changed files from watcher' 0.4024149999022484ms
+[NX Daemon Server] - 2024-01-13T20:36:28.376Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T20:36:28.376Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:36:34.783Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T20:36:34.784Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T20:36:34.784Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T20:36:34.794Z - Time taken for 'hash changed files from watcher' 0.2673510015010834ms
+[NX Daemon Server] - 2024-01-13T20:37:01.038Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/4913 was deleted
+[NX Daemon Server] - 2024-01-13T20:37:01.038Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:37:01.104Z - [WATCHER]: FRONT-ENDS/projects/primmo/src/app/app.component.sass was deleted
+[NX Daemon Server] - 2024-01-13T20:37:01.105Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:37:07.445Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T20:37:07.446Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T20:37:07.446Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T20:37:07.457Z - Time taken for 'hash changed files from watcher' 0.2188440039753914ms
+[NX Daemon Server] - 2024-01-13T20:38:03.675Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T20:38:03.675Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:38:10.083Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T20:38:10.083Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T20:38:10.083Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.html
+[NX Daemon Server] - 2024-01-13T20:38:10.095Z - Time taken for 'hash changed files from watcher' 0.4306799992918968ms
+[NX Daemon Server] - 2024-01-13T20:38:41.055Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T20:38:41.055Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:38:47.462Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T20:38:47.462Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T20:38:47.462Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T20:38:47.470Z - Time taken for 'hash changed files from watcher' 0.215489000082016ms
+[NX Daemon Server] - 2024-01-13T20:39:05.316Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T20:39:05.317Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:39:11.723Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T20:39:11.724Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T20:39:11.724Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T20:39:11.733Z - Time taken for 'hash changed files from watcher' 0.4002149999141693ms
+[NX Daemon Server] - 2024-01-13T20:59:07.461Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T20:59:07.461Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:59:13.870Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T20:59:13.871Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T20:59:13.871Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T20:59:13.879Z - Time taken for 'hash changed files from watcher' 1.4356340020895004ms
+[NX Daemon Server] - 2024-01-13T20:59:24.610Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T20:59:24.610Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T20:59:31.017Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T20:59:31.018Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T20:59:31.018Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T20:59:31.028Z - Time taken for 'hash changed files from watcher' 0.2711689993739128ms
+[NX Daemon Server] - 2024-01-13T21:00:05.879Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:00:05.879Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:00:12.286Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:00:12.286Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:00:12.287Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T21:00:12.295Z - Time taken for 'hash changed files from watcher' 0.512472003698349ms
+[NX Daemon Server] - 2024-01-13T21:00:42.311Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:00:42.311Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:00:48.719Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:00:48.719Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:00:48.719Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T21:00:48.729Z - Time taken for 'hash changed files from watcher' 0.3500179946422577ms
+[NX Daemon Server] - 2024-01-13T21:02:25.589Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:02:25.589Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:02:31.996Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:02:31.997Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:02:31.997Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/4913,FRONT-ENDS/projects/primmo/src/styles.sass
+[NX Daemon Server] - 2024-01-13T21:02:32.005Z - Time taken for 'hash changed files from watcher' 0.2713500037789345ms
+[NX Daemon Server] - 2024-01-13T21:02:38.732Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:02:38.732Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:02:45.136Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:02:45.136Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:02:45.136Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/styles.sass,FRONT-ENDS/projects/primmo/src/4913
+[NX Daemon Server] - 2024-01-13T21:02:45.145Z - Time taken for 'hash changed files from watcher' 0.27761999517679214ms
+[NX Daemon Server] - 2024-01-13T21:33:20.936Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:33:20.947Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:33:27.356Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:33:27.356Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:33:27.356Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T21:33:27.391Z - Time taken for 'hash changed files from watcher' 1.0287950038909912ms
+[NX Daemon Server] - 2024-01-13T21:35:43.909Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:35:43.910Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:35:50.316Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:35:50.316Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:35:50.316Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.sass,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T21:35:50.324Z - Time taken for 'hash changed files from watcher' 0.2015720009803772ms
+[NX Daemon Server] - 2024-01-13T21:36:00.339Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:36:00.340Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:36:06.747Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:36:06.747Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:36:06.747Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T21:36:06.755Z - Time taken for 'hash changed files from watcher' 0.3328230008482933ms
+[NX Daemon Server] - 2024-01-13T21:36:17.196Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:36:17.196Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:36:23.603Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:36:23.603Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:36:23.603Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T21:36:23.608Z - Time taken for 'hash changed files from watcher' 0.27282900363206863ms
+[NX Daemon Server] - 2024-01-13T21:36:54.253Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:36:54.254Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:37:00.660Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:37:00.661Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:37:00.661Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T21:37:00.668Z - Time taken for 'hash changed files from watcher' 0.10813099890947342ms
+[NX Daemon Server] - 2024-01-13T21:42:19.971Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T21:42:19.971Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T21:42:26.379Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T21:42:26.379Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T21:42:26.379Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-13T21:42:26.385Z - Time taken for 'hash changed files from watcher' 0.3585980013012886ms
+[NX Daemon Server] - 2024-01-13T22:00:16.927Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T22:00:16.927Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T22:00:23.333Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T22:00:23.334Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T22:00:23.334Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T22:00:23.337Z - Time taken for 'hash changed files from watcher' 0.4514639973640442ms
+[NX Daemon Server] - 2024-01-13T22:00:41.987Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T22:00:41.987Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T22:00:48.394Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T22:00:48.395Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T22:00:48.395Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-13T22:00:48.403Z - Time taken for 'hash changed files from watcher' 0.2832079976797104ms
+[NX Daemon Server] - 2024-01-13T22:00:54.445Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-13T22:00:54.445Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-13T22:01:00.852Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-13T22:01:00.852Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-13T22:01:00.853Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.html
+[NX Daemon Server] - 2024-01-13T22:01:00.861Z - Time taken for 'hash changed files from watcher' 0.3168160021305084ms
+[NX Daemon Server] - 2024-01-14T19:59:06.970Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T19:59:06.970Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T19:59:07.465Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T19:59:07.467Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T19:59:13.378Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T19:59:13.379Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T19:59:13.379Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T19:59:13.389Z - Time taken for 'hash changed files from watcher' 0.5591029971837997ms
+[NX Daemon Server] - 2024-01-14T20:00:56.043Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:00:56.043Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:00:56.491Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:00:56.492Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T20:01:02.449Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:01:02.449Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T20:01:02.449Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T20:01:02.456Z - Time taken for 'hash changed files from watcher' 0.39854100346565247ms
+[NX Daemon Server] - 2024-01-14T20:05:50.169Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:05:50.169Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:05:50.566Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:05:50.567Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T20:05:56.576Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:05:56.577Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T20:05:56.577Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.ts
+[NX Daemon Server] - 2024-01-14T20:05:56.586Z - Time taken for 'hash changed files from watcher' 0.5266629979014397ms
+[NX Daemon Server] - 2024-01-14T20:07:09.451Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:07:09.451Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:07:15.858Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:07:15.862Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:07:15.862Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/index.html,FRONT-ENDS/projects/primmo/src/4913
+[NX Daemon Server] - 2024-01-14T20:07:15.869Z - Time taken for 'hash changed files from watcher' 0.385064996778965ms
+[NX Daemon Server] - 2024-01-14T20:08:07.065Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T20:08:07.065Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:08:13.472Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:08:13.472Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T20:08:13.472Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:08:13.480Z - Time taken for 'hash changed files from watcher' 0.49794699996709824ms
+[NX Daemon Server] - 2024-01-14T20:08:21.473Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T20:08:21.474Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:08:27.881Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:08:27.882Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T20:08:27.882Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:08:27.896Z - Time taken for 'hash changed files from watcher' 0.5592539981007576ms
+[NX Daemon Server] - 2024-01-14T20:29:41.447Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:29:41.447Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:29:42.131Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:29:42.133Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T20:29:47.852Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:29:47.853Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T20:29:47.853Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.module.ts
+[NX Daemon Server] - 2024-01-14T20:29:47.856Z - Time taken for 'hash changed files from watcher' 0.24041300266981125ms
+[NX Daemon Server] - 2024-01-14T20:32:34.944Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T20:32:34.944Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:32:41.354Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:32:41.354Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T20:32:41.354Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:32:41.625Z - Time taken for 'hash changed files from watcher' 0.3176880031824112ms
+[NX Daemon Server] - 2024-01-14T20:32:57.609Z - [WATCHER]: 16 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:32:57.609Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:32:57.751Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:32:57.751Z - [REQUEST]: FRONT-ENDS/dist/primmo/server/main.server.mjs,FRONT-ENDS/dist/primmo/server/chunk-UCQRFZ72.mjs,FRONT-ENDS/dist/primmo/3rdpartylicenses.txt,FRONT-ENDS/dist/primmo/server/chunk-GVA23EAU.mjs,FRONT-ENDS/dist/primmo/browser/polyfills-LZBJRJJE.js,FRONT-ENDS/dist/primmo/browser/index.html,FRONT-ENDS/dist/primmo/browser/favicon.ico,FRONT-ENDS/dist/primmo/prerendered-routes.json,FRONT-ENDS/dist/primmo/server/polyfills.server.mjs,FRONT-ENDS/dist/primmo/server/chunk-KRLCULJA.mjs,FRONT-ENDS/dist/primmo/browser/main-KYMQ224P.js,FRONT-ENDS/dist/primmo/server/render-utils.server.mjs,FRONT-ENDS/dist/primmo/server/chunk-53JWIC36.mjs,FRONT-ENDS/dist/primmo/server/server.mjs,FRONT-ENDS/dist/primmo/browser/styles-JYVTNJKP.css,FRONT-ENDS/dist/primmo/server/index.server.html
+[NX Daemon Server] - 2024-01-14T20:32:57.751Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:32:57.755Z - Time taken for 'hash changed files from watcher' 42.002682998776436ms
+[NX Daemon Server] - 2024-01-14T20:56:34.277Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:56:34.277Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:56:34.477Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:56:34.478Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:56:34.478Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.module.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T20:56:34.486Z - Time taken for 'hash changed files from watcher' 0.3338000029325485ms
+[NX Daemon Server] - 2024-01-14T20:56:34.702Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:56:34.703Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T20:56:35.104Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:56:35.105Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T20:56:35.105Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:56:35.109Z - Time taken for 'hash changed files from watcher' 0.24957000464200974ms
+[NX Daemon Server] - 2024-01-14T20:56:39.323Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_88b8d3bf/package.json was created or restored
+[NX Daemon Server] - 2024-01-14T20:56:39.323Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:56:39.424Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:56:39.424Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_88b8d3bf/package.json
+[NX Daemon Server] - 2024-01-14T20:56:39.424Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:56:39.429Z - Time taken for 'hash changed files from watcher' 0.3174550011754036ms
+[NX Daemon Server] - 2024-01-14T20:56:43.004Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:56:43.007Z - [WATCHER]: 15 file(s) created or restored, 0 file(s) modified, 3 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:56:43.067Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 11 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:56:43.067Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:56:43.211Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:56:43.212Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:56:43.212Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_88b8d3bf,FRONT-ENDS/.angular/cache/17.0.9/vite/deps,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/@angular_core.js,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/chunk-AIMCZFQX.js.map,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/@angular_router.js.map,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/@angular_platform-browser.js,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/chunk-7X2DQXYU.js,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/@angular_core.js.map,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/chunk-AIMCZFQX.js,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/package.json,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/chunk-7X2DQXYU.js.map,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/@angular_platform-browser.js.map,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/@angular_router.js,FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_b14fd7fb/_metadata.json
+[NX Daemon Server] - 2024-01-14T20:56:43.219Z - Time taken for 'hash changed files from watcher' 0.2772039994597435ms
+[NX Daemon Server] - 2024-01-14T20:57:19.964Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:57:19.964Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:57:20.365Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:57:20.365Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T20:57:20.365Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-14T20:57:20.369Z - Time taken for 'hash changed files from watcher' 0.1590230017900467ms
+[NX Daemon Server] - 2024-01-14T20:58:37.002Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:58:37.003Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:58:37.550Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:58:37.551Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T20:58:37.803Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:58:37.804Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T20:58:37.804Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T20:58:37.807Z - Time taken for 'hash changed files from watcher' 0.19435600191354752ms
+[NX Daemon Server] - 2024-01-14T20:58:57.740Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:58:57.740Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T20:58:58.213Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T20:58:58.214Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T20:58:59.342Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T20:58:59.342Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T20:58:59.342Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T20:58:59.345Z - Time taken for 'hash changed files from watcher' 0.24363400042057037ms
+[NX Daemon Server] - 2024-01-14T21:03:51.102Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:03:51.102Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:03:51.770Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:03:51.770Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:03:54.306Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:03:54.306Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:03:54.306Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.ts
+[NX Daemon Server] - 2024-01-14T21:03:54.315Z - Time taken for 'hash changed files from watcher' 0.6257980018854141ms
+[NX Daemon Server] - 2024-01-14T21:04:26.637Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:04:26.637Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:04:27.192Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:04:27.194Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:04:33.044Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:04:33.044Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:04:33.044Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T21:04:33.055Z - Time taken for 'hash changed files from watcher' 0.6539079993963242ms
+[NX Daemon Server] - 2024-01-14T21:04:50.706Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:04:50.706Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:04:51.245Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:04:51.246Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:04:57.113Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:04:57.113Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:04:57.113Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T21:04:57.122Z - Time taken for 'hash changed files from watcher' 0.6006400063633919ms
+[NX Daemon Server] - 2024-01-14T21:05:06.909Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:05:06.909Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:05:07.385Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:05:07.387Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:05:13.316Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:05:13.316Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:05:13.316Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.ts
+[NX Daemon Server] - 2024-01-14T21:05:13.329Z - Time taken for 'hash changed files from watcher' 0.6749870032072067ms
+[NX Daemon Server] - 2024-01-14T21:05:15.837Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:05:15.838Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:05:16.265Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:05:16.266Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:05:22.244Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:05:22.245Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:05:22.245Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T21:05:22.257Z - Time taken for 'hash changed files from watcher' 0.7425189986824989ms
+[NX Daemon Server] - 2024-01-14T21:05:55.602Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:05:55.603Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:06:02.009Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:06:02.009Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T21:06:02.010Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T21:06:02.014Z - Time taken for 'hash changed files from watcher' 0.3893590047955513ms
+[NX Daemon Server] - 2024-01-14T21:15:00.069Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:15:00.069Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:15:00.576Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:15:00.577Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:15:06.476Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:15:06.476Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:15:06.476Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.ts
+[NX Daemon Server] - 2024-01-14T21:15:06.485Z - Time taken for 'hash changed files from watcher' 0.6274890005588531ms
+[NX Daemon Server] - 2024-01-14T21:15:14.380Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:15:14.380Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:15:20.787Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:15:20.788Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T21:15:20.788Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.html
+[NX Daemon Server] - 2024-01-14T21:15:20.793Z - Time taken for 'hash changed files from watcher' 0.2865909934043884ms
+[NX Daemon Server] - 2024-01-14T21:17:36.032Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:17:36.032Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:17:36.517Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:17:36.518Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:17:42.439Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:17:42.439Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:17:42.440Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.html
+[NX Daemon Server] - 2024-01-14T21:17:42.450Z - Time taken for 'hash changed files from watcher' 0.5137239992618561ms
+[NX Daemon Server] - 2024-01-14T21:17:58.203Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:17:58.203Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:17:58.661Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:17:58.662Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:18:04.609Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:18:04.609Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:18:04.609Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.html,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T21:18:04.617Z - Time taken for 'hash changed files from watcher' 0.1646919995546341ms
+[NX Daemon Server] - 2024-01-14T21:18:37.162Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:18:37.163Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:18:37.678Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:18:37.678Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:18:43.569Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:18:43.570Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:18:43.570Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T21:18:43.580Z - Time taken for 'hash changed files from watcher' 0.5224339962005615ms
+[NX Daemon Server] - 2024-01-14T21:59:13.405Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:59:13.405Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:59:19.812Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:59:19.813Z - [REQUEST]: 
+[NX Daemon Server] - 2024-01-14T21:59:19.813Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.html
+[NX Daemon Server] - 2024-01-14T21:59:19.830Z - Time taken for 'hash changed files from watcher' 0.4211830049753189ms
+[NX Daemon Server] - 2024-01-14T21:59:36.722Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T21:59:36.722Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:59:37.228Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T21:59:37.228Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T21:59:43.127Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T21:59:43.127Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T21:59:43.127Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.html
+[NX Daemon Server] - 2024-01-14T21:59:43.137Z - Time taken for 'hash changed files from watcher' 0.6154050007462502ms
+[NX Daemon Server] - 2024-01-14T22:01:34.558Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:01:34.558Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:01:35.078Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:01:35.081Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:01:40.964Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:01:40.965Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:01:40.965Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.sass
+[NX Daemon Server] - 2024-01-14T22:01:40.976Z - Time taken for 'hash changed files from watcher' 0.5289840027689934ms
+[NX Daemon Server] - 2024-01-14T22:03:03.158Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:03:03.158Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:03:03.740Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:03:03.741Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:03:09.565Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:03:09.565Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:03:09.565Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:03:09.579Z - Time taken for 'hash changed files from watcher' 0.8711360022425652ms
+[NX Daemon Server] - 2024-01-14T22:06:44.296Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:06:44.297Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:06:44.819Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:06:44.820Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:06:50.702Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:06:50.702Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:06:50.703Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:06:50.728Z - Time taken for 'hash changed files from watcher' 0.5206839963793755ms
+[NX Daemon Server] - 2024-01-14T22:07:08.630Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:07:08.630Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:07:09.078Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:07:09.078Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:07:15.033Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:07:15.033Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:07:15.033Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:07:15.044Z - Time taken for 'hash changed files from watcher' 0.2076689973473549ms
+[NX Daemon Server] - 2024-01-14T22:07:30.416Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:07:30.416Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:07:30.885Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:07:30.885Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:07:36.822Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:07:36.823Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:07:36.823Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:07:36.832Z - Time taken for 'hash changed files from watcher' 0.5566029995679855ms
+[NX Daemon Server] - 2024-01-14T22:10:12.739Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:10:12.739Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:10:13.209Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:10:13.211Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:10:19.145Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:10:19.145Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:10:19.146Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:10:19.158Z - Time taken for 'hash changed files from watcher' 0.47013700008392334ms
+[NX Daemon Server] - 2024-01-14T22:10:22.372Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:10:22.373Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:10:22.829Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:10:22.830Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:10:28.779Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:10:28.779Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:10:28.780Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.ts
+[NX Daemon Server] - 2024-01-14T22:10:28.792Z - Time taken for 'hash changed files from watcher' 0.4861389994621277ms
+[NX Daemon Server] - 2024-01-14T22:11:41.824Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:11:41.824Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:11:42.335Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:11:42.336Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:11:48.229Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:11:48.230Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:11:48.230Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:11:48.239Z - Time taken for 'hash changed files from watcher' 0.5581260025501251ms
+[NX Daemon Server] - 2024-01-14T22:12:06.652Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:12:06.653Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:12:07.148Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:12:07.148Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:12:13.059Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:12:13.060Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:12:13.060Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:12:13.070Z - Time taken for 'hash changed files from watcher' 0.6681709960103035ms
+[NX Daemon Server] - 2024-01-14T22:12:29.269Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:12:29.270Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:12:29.737Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:12:29.738Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:12:35.671Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:12:35.671Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:12:35.671Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.ts
+[NX Daemon Server] - 2024-01-14T22:12:35.681Z - Time taken for 'hash changed files from watcher' 0.2790760025382042ms
+[NX Daemon Server] - 2024-01-14T22:12:52.066Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:12:52.067Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:12:52.527Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:12:52.527Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:12:58.473Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:12:58.473Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:12:58.474Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.ts
+[NX Daemon Server] - 2024-01-14T22:12:58.486Z - Time taken for 'hash changed files from watcher' 0.4996350035071373ms
+[NX Daemon Server] - 2024-01-14T22:13:15.527Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:13:15.528Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:13:16.000Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:13:16.000Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:13:21.934Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:13:21.935Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:13:21.935Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:13:21.946Z - Time taken for 'hash changed files from watcher' 0.5244130045175552ms
+[NX Daemon Server] - 2024-01-14T22:13:33.107Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:13:33.108Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:13:33.657Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:13:33.659Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:13:39.514Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:13:39.515Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:13:39.515Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:13:39.524Z - Time taken for 'hash changed files from watcher' 0.24025999754667282ms
+[NX Daemon Server] - 2024-01-14T22:14:07.091Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:14:07.092Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:14:07.553Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:14:07.553Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:14:13.499Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:14:13.499Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:14:13.500Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/4913,FRONT-ENDS/projects/primmo/src/app/app.component.ts
+[NX Daemon Server] - 2024-01-14T22:14:13.510Z - Time taken for 'hash changed files from watcher' 0.7391659989953041ms
+[NX Daemon Server] - 2024-01-14T22:14:23.193Z - [WATCHER]: 0 file(s) created or restored, 0 file(s) modified, 2 file(s) deleted
+[NX Daemon Server] - 2024-01-14T22:14:23.194Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:14:23.734Z - [WATCHER]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo was modified
+[NX Daemon Server] - 2024-01-14T22:14:23.734Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2024-01-14T22:14:29.601Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-01-14T22:14:29.601Z - [REQUEST]: FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo
+[NX Daemon Server] - 2024-01-14T22:14:29.601Z - [REQUEST]: FRONT-ENDS/projects/primmo/src/app/app.component.ts,FRONT-ENDS/projects/primmo/src/app/4913
+[NX Daemon Server] - 2024-01-14T22:14:29.611Z - Time taken for 'hash changed files from watcher' 0.552157998085022ms
+[NX Daemon Server] - 2024-01-15T08:51:53.082Z - [WATCHER]: .nx/cache/d/server-process.json was deleted
+[NX Daemon Server] - 2024-01-15T08:51:53.091Z - [WATCHER]: Stopping the watcher for /home/yannickletallec/Documents/IMMO-APP/CODE (sources)
+[NX Daemon Server] - 2024-01-15T08:51:53.092Z - [WATCHER]: Stopping the watcher for /home/yannickletallec/Documents/IMMO-APP/CODE (sources)
+[NX Daemon Server] - 2024-01-15T08:51:53.092Z - [WATCHER]: Stopping the watcher for /home/yannickletallec/Documents/IMMO-APP/CODE (outputs)
+[NX Daemon Server] - 2024-01-15T08:51:53.093Z - Server stopped because: "10800000ms of inactivity"

@@ -3,9 +3,8 @@
 # DB Config
 ENV=test
 
-SCHEMA=test
+SCHEMA=primmo_bash_dev
 DB=test_0
-SCHEMA=test
 USER=yannick
 email_test=yannick9letallec@gmail.com
 file_copy_path=/var/lib/pgsql/data/CHARGES/Scripts/TEST/Files/INDIVIDUELLE

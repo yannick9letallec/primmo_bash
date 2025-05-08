@@ -43,14 +43,14 @@ else
 				then
 					echo 'AUCUNE QUITTANCE TROUVEE'
 					#on génère toutes les quittances
-					 gum spin --show-error --show-stderr --title "Génération fichiers en cours ..." -- ./COLOCATION_generer_fichier_quittance.sh "copy ( select periode_couverte || '|' || contenu || '|' || nom_fichier from test.quittance where fk_locataire = ${loc_id} ) to stdout;"
+					 gum spin --show-error --show-stderr --title "Génération fichiers en cours ..." -- ./COLOCATION_generer_fichier_quittance.sh "copy ( select periode_couverte || '|' || contenu || '|' || nom_fichier from primmo_bash_dev.quittance where fk_locataire = ${loc_id} ) to stdout;"
 				# quittances trouvées ( partiel ou total )
 				else
 					quittance_derniere=$( echo -e "${quittance_listing}" | sort -r | head -1 | grep -oP '\d{4}-\d{2}' )
 					# echo -e $quittance_derniere
 					echo -e ""${nb_quittance}" QUITTANCE(S) TROUVEE(S). Dernière en date : "${quittance_derniere}""
 
-					gum spin --show-error --show-stderr --title "Génération fichiers en cours ..." -- ./COLOCATION_generer_fichier_quittance.sh "copy ( select periode_couverte || '|' || nom_fichier from test.quittance where fk_locataire = ${loc_id} and periode_couverte > "\'${quittance_derniere}\'" ) to stdout;"
+					gum spin --show-error --show-stderr --title "Génération fichiers en cours ..." -- ./COLOCATION_generer_fichier_quittance.sh "copy ( select periode_couverte || '|' || nom_fichier from primmo_bash_dev.quittance where fk_locataire = ${loc_id} and periode_couverte > "\'${quittance_derniere}\'" ) to stdout;"
 				fi
 
 				# gestion des quittances à jour, on selectionne celles à envoyer par email.

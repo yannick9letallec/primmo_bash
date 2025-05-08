@@ -1,8 +1,8 @@
 /* FONCTIONS CHARGES */
 
 
-DROP FUNCTION IF EXISTS test.charge_est_facturee_sur_annee ( integer, numeric );
-CREATE OR REPLACE FUNCTION test.charge_est_facturee_sur_annee (  arg_type_charge integer, annee numeric )
+DROP FUNCTION IF EXISTS primmo_bash_dev.charge_est_facturee_sur_annee ( integer, numeric );
+CREATE OR REPLACE FUNCTION primmo_bash_dev.charge_est_facturee_sur_annee (  arg_type_charge integer, annee numeric )
 RETURNS boolean AS
 $$
  declare
@@ -27,7 +27,7 @@ $$
 	work_year_range = daterange( start_work_year, end_work_year, '[]' );
 
 	est_couverture_ok = ( select coalesce( range_agg( periode ) @> work_year_range, false )
-	from test.charges 
+	from primmo_bash_dev.charges 
 	where 
 		fk_type_charge = arg_type_charge
 		and ( 
@@ -39,12 +39,12 @@ $$
 	return est_couverture_ok;
  end
 $$
-LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'test' SECURITY DEFINER;
--- SELECT test.charge_est_facturee_sur_annee ( 3, 2024 );
+LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
+-- SELECT primmo_bash_dev.charge_est_facturee_sur_annee ( 3, 2024 );
 
 
 DROP FUNCTION IF EXISTS charges_sont_facturees_sur_annee( integer );
-CREATE OR REPLACE FUNCTION test.charges_sont_facturees_sur_annee(  arg_type_charge integer = 999999 )
+CREATE OR REPLACE FUNCTION primmo_bash_dev.charges_sont_facturees_sur_annee(  arg_type_charge integer = 999999 )
 RETURNS table( annee int, type_charge int, label TEXT, est_completude_annuelle boolean, periode_annuelle daterange ) AS
 $$
  declare
@@ -61,7 +61,7 @@ $$
     raise notice 'FONCTION : charges_sont_facturees_sur_annee: arg 1 : type_charge : % ( 999999 is default )', arg_type_charge;
 
 	SELECT EXTRACT( YEAR FROM current_date ) into actual_year;
-    select min ( extract ( year from ( lower( periode ) ) ) ) into work_year from test.charges;
+    select min ( extract ( year from ( lower( periode ) ) ) ) into work_year from primmo_bash_dev.charges;
 	
 	-- renvoyer un resultat du type ( ' annee ', ' type charge ', ' est_complet ' )
 	<<year_loop>>
@@ -82,9 +82,9 @@ $$
 				work_year_range = daterange( start_work_year, end_work_year, '[)' );  
  
 				with couverture_factures_annuelle as (
-					select * from test.charges where fk_type_charge = 2 and 2024 = extract ( year from ( lower( periode ) ) )
+					select * from primmo_bash_dev.charges where fk_type_charge = 2 and 2024 = extract ( year from ( lower( periode ) ) )
 						UNION
-					select * from test.charges where fk_type_charge = 2 and 2024 = extract ( year from ( upper( periode ) ) )
+					select * from primmo_bash_dev.charges where fk_type_charge = 2 and 2024 = extract ( year from ( upper( periode ) ) )
 					order by id
 				) select range_agg( periode ) @> work_year_range into est_couverture_ok from couverture_factures_annuelle;
 	
@@ -110,8 +110,8 @@ $$
    return;
  end
 $$
-LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'test' SECURITY DEFINER;
--- SELECT * FROM test.charges_sont_facturees_sur_annee ( 1 );
+LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
+-- SELECT * FROM primmo_bash_dev.charges_sont_facturees_sur_annee ( 1 );
 
 
 DROP FUNCTION IF EXISTS verifier_factures_sont_adjacentes;
@@ -125,7 +125,7 @@ $$
 RETURN TRUE;
 END
 $$
-LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 
 
 -- SSI on a une date de fin de bail pour un locataire donné
@@ -179,7 +179,7 @@ $$
     
  end
 $$
-LANGUAGE plpgsql SET search_path TO 'test' SECURITY DEFINER STABLE;
+LANGUAGE plpgsql SET search_path TO 'primmo_bash_dev' SECURITY DEFINER STABLE;
 
 
 DROP FUNCTION IF EXISTS charges_sont_cloturees( int );
@@ -188,7 +188,7 @@ RETURNS boolean AS
 $$
  	select EST_CHARGE_CLOTURE from TEST.LOCATAIRE C where id = locataire_id;
 $$
-LANGUAGE sql VOLATILE SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE sql VOLATILE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 
 
 DROP FUNCTION IF EXISTS charge_point_de_situation;
@@ -209,7 +209,7 @@ $$
 		-- delta : cp - pp
 	end
 $$
-LANGUAGE plpgsql SET search_path TO 'test' security DEFINER;
+LANGUAGE plpgsql SET search_path TO 'primmo_bash_dev' security DEFINER;
 
 
 DROP FUNCTION IF EXISTS charges_sont_periodes_fusionnables ;
@@ -235,7 +235,7 @@ $$
    return sont_adjacentes;
  end
 $$
-LANGUAGE plpgsql SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE plpgsql SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 
 
 /*
@@ -343,5 +343,5 @@ $$
   return oResult;
 end
 $$
-LANGUAGE plpgsql VOLATILE SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE plpgsql VOLATILE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 */

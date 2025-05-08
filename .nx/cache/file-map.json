@@ -1,0 +1,250 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.2.8",
+  "deps": {
+    "nx": "17.2.8"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "package-lock.json",
+        "hash": "5334351121497716177"
+      },
+      {
+        "file": "FRONT-ENDS/.gitignore",
+        "hash": "13044518069027839699"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/app/app.config.ts",
+        "hash": "5428614352870646528"
+      },
+      {
+        "file": "FRONT-ENDS/.angular/cache/17.0.9/primmo/.tsbuildinfo",
+        "hash": "16180802082683346511"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/app/app.routes.ts",
+        "hash": "12397496131277534773"
+      },
+      {
+        "file": "FRONT-ENDS/README.md",
+        "hash": "4751549934052680591"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/browser/styles-JYVTNJKP.css",
+        "hash": "13009454432883139908"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/app/app.component.ts",
+        "hash": "15318320974993724016"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/app/app.component.html",
+        "hash": "11674821338351736108"
+      },
+      {
+        "file": "FRONT-ENDS/.vscode/launch.json",
+        "hash": "17038929134016848735"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/src/main.server.ts",
+        "hash": "1797789495484982956"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/server/polyfills.server.mjs",
+        "hash": "7968502407974892923"
+      },
+      {
+        "file": "FRONT-ENDS/tsconfig.json",
+        "hash": "6830907402848794383"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/src/app/app.module.server.ts",
+        "hash": "7885674756072090716"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2110945332964774953"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "FRONT-ENDS/package-lock.json",
+        "hash": "8886963020019975693"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/server/chunk-KRLCULJA.mjs",
+        "hash": "15337594952824951989"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/browser/main-KYMQ224P.js",
+        "hash": "6090716839933282054"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/src/app/patrimoine/patrimoine.module.ts",
+        "hash": "17367448426248672258"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/app/app.component.less",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/3rdpartylicenses.txt",
+        "hash": "472065425806765488"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/tsconfig.app.json",
+        "hash": "18047083567304406802"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/tsconfig.spec.json",
+        "hash": "8046768446203215749"
+      },
+      {
+        "file": "FRONT-ENDS/.vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": "FRONT-ENDS/.vscode/extensions.json",
+        "hash": "5331566439708925252"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/src/app/app-routing.module.ts",
+        "hash": "6250625392482207240"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/browser/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/server/render-utils.server.mjs",
+        "hash": "1843493730766093049"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/server/chunk-53JWIC36.mjs",
+        "hash": "3116721081723747723"
+      },
+      {
+        "file": "FRONT-ENDS/.editorconfig",
+        "hash": "6686520031028425313"
+      },
+      {
+        "file": "nx.bat",
+        "hash": "16828809655253213278"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/main.ts",
+        "hash": "4927504514031276065"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/tsconfig.spec.json",
+        "hash": "8046768446203215749"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/styles.less",
+        "hash": "5195668842064076916"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/server.ts",
+        "hash": "12690680755363386394"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/server/chunk-GVA23EAU.mjs",
+        "hash": "8424569282990592017"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/browser/index.html",
+        "hash": "1575334100964370103"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/prerendered-routes.json",
+        "hash": "18099171224488230190"
+      },
+      {
+        "file": ".nx/nxw.js",
+        "hash": "12745799026369821992"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/app/app.component.spec.ts",
+        "hash": "2042461982749206667"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/server/main.server.mjs",
+        "hash": "692645173324465495"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/src/app/app.component.spec.ts",
+        "hash": "5845363333979686812"
+      },
+      {
+        "file": "nx",
+        "hash": "17165975525224888679"
+      },
+      {
+        "file": "FRONT-ENDS/angular.json",
+        "hash": "18408630059579409364"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/browser/polyfills-LZBJRJJE.js",
+        "hash": "5941810377592141465"
+      },
+      {
+        "file": "FRONT-ENDS/package.json",
+        "hash": "8565960856229863525"
+      },
+      {
+        "file": "FRONT-ENDS/.angular/cache/17.0.9/vite/deps_temp_88b8d3bf/package.json",
+        "hash": "8630294688235076505"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/src/app/biens/biens.module.ts",
+        "hash": "18240591881242103946"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/server/chunk-UCQRFZ72.mjs",
+        "hash": "13240917872161491049"
+      },
+      {
+        "file": "nx.json",
+        "hash": "5956053880176400119"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/server/server.mjs",
+        "hash": "17424683508665658502"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/src/index.html",
+        "hash": "7024592384616923535"
+      },
+      {
+        "file": "FRONT-ENDS/projects/tercero/tsconfig.app.json",
+        "hash": "14176067227322044330"
+      },
+      {
+        "file": "FRONT-ENDS/dist/primmo/server/index.server.html",
+        "hash": "8336067705601418724"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "FRONT-ENDS/projects/primmo/src/main.ts",
+        "hash": "17800265944815063342"
+      }
+    ],
+    "projectFileMap": {}
+  }
+}

@@ -1,4 +1,4 @@
-\set work_schema test
+\set work_schema primmo_bash_dev
 
 \set quittance_tpl `cat ./quittance.md`
 \set quittance_email_tpl `cat ./quittance_email.md`
@@ -14,7 +14,7 @@ WHERE id IN ( 1, 2, 3 );
 
 
 \echo '2 > Suppression des quittances déjà générées'
-TRUNCATE TABLE test.quittance RESTART IDENTITY;
+TRUNCATE TABLE primmo_bash_dev.quittance RESTART IDENTITY;
 
 
 \prompt 'Supprimer les fichiers de quittances existants ? ( y/N )' sup_quit 

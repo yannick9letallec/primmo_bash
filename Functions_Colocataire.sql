@@ -17,8 +17,8 @@
  */
 
 
-DROP FUNCTION IF EXISTS test.lister_locataires( int ) RESTRICT;
-CREATE OR REPLACE FUNCTION test.lister_locataires ( id_bien int )
+DROP FUNCTION IF EXISTS primmo_bash_dev.lister_locataires( int ) RESTRICT;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.lister_locataires ( id_bien int )
 RETURNS table( id int, nom TEXT, prenom TEXT ) AS 
 $$
 	select c.id, nom, prenom 
@@ -28,42 +28,42 @@ $$
 			where b.id = id_bien 
 			order by c.id;
 $$
-LANGUAGE sql SET search_path TO test SECURITY DEFINER;
+LANGUAGE sql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.lister_locataires_presents( int ) RESTRICT;
-CREATE OR REPLACE FUNCTION test.lister_locataires_presents ( id_bien int )
+DROP FUNCTION IF EXISTS primmo_bash_dev.lister_locataires_presents( int ) RESTRICT;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.lister_locataires_presents ( id_bien int )
 RETURNS table( id int, nom TEXT, prenom TEXT ) AS 
 $$
 select c.id, nom, prenom 
-			from test.locataire c 
-			inner join test.actif a on c.fk_actif = a.id 
-			inner join test.bien b on a.fk_bien = b.id
+			from primmo_bash_dev.locataire c 
+			inner join primmo_bash_dev.actif a on c.fk_actif = a.id 
+			inner join primmo_bash_dev.bien b on a.fk_bien = b.id
 			where b.id = id_bien 
 			and upper( periode_occupation ) is null 
 			or ( upper( periode_occupation ) is not null and periode_occupation @> current_date ) 
 			order by c.id; 
 $$
-LANGUAGE sql SET search_path TO test SECURITY DEFINER;
+LANGUAGE sql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.lister_locataires_anciens( int ) RESTRICT;
-CREATE OR REPLACE FUNCTION test.lister_locataires_anciens ( id_bien int )
+DROP FUNCTION IF EXISTS primmo_bash_dev.lister_locataires_anciens( int ) RESTRICT;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.lister_locataires_anciens ( id_bien int )
 RETURNS table( id int, nom TEXT, prenom TEXT ) AS 
 $$
 select c.id, nom, prenom 
-			from test.locataire c 
-			inner join test.actif a on c.fk_actif = a.id 
-			inner join test.bien b on a.fk_bien = b.id
+			from primmo_bash_dev.locataire c 
+			inner join primmo_bash_dev.actif a on c.fk_actif = a.id 
+			inner join primmo_bash_dev.bien b on a.fk_bien = b.id
 			where b.id = id_bien 
 			and current_date > upper( periode_occupation )  
 			order by c.id; 
 $$
-LANGUAGE sql SET search_path TO test SECURITY DEFINER;
+LANGUAGE sql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.locataire_existe ( int ) RESTRICT;
-CREATE OR REPLACE FUNCTION test.locataire_existe ( id_locataire int )
+DROP FUNCTION IF EXISTS primmo_bash_dev.locataire_existe ( int ) RESTRICT;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.locataire_existe ( id_locataire int )
 RETURNS boolean  
 AS 
 $$
@@ -79,11 +79,11 @@ $$
 		end if;
  end
 $$
-LANGUAGE plpgsql SET search_path TO test SECURITY DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.verbose_duration_bail;
-CREATE OR REPLACE FUNCTION test.verbose_duration_bail( locataire_id integer )
+DROP FUNCTION IF EXISTS primmo_bash_dev.verbose_duration_bail;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.verbose_duration_bail( locataire_id integer )
 RETURNS text AS
 $$
  declare
@@ -93,7 +93,7 @@ $$
  BEGIN
 	 raise notice 'FONCTION : verbose_duration_bail';
 
-	select upper( periode_occupation ) into date_fin_calcul from test.locataire where id = locataire_id;
+	select upper( periode_occupation ) into date_fin_calcul from primmo_bash_dev.locataire where id = locataire_id;
 
 	if date_fin_calcul is null then
 		 date_fin_calcul = current_date;
@@ -109,27 +109,27 @@ $$
     	||
    		extract( day from age( date_fin_calcul, lower( periode_occupation ) ) ) || ' Jour( s )'
 	into msg
-	from test.locataire  
+	from primmo_bash_dev.locataire  
 	where id = locataire_id;
 
-		--select upper( periode_occupation ) - lower( periode_occupation )as duration from test.locataire;
+		--select upper( periode_occupation ) - lower( periode_occupation )as duration from primmo_bash_dev.locataire;
 
    return prefix || msg;
  end
 $$
-LANGUAGE plpgsql SET search_path TO test SECURITY DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.date_fin_bail;
-CREATE OR REPLACE FUNCTION test.date_fin_bail( locataire_id integer )
+DROP FUNCTION IF EXISTS primmo_bash_dev.date_fin_bail;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.date_fin_bail( locataire_id integer )
 RETURNS date AS
 $$
    select upper( periode_occupation ) from locataire where id = locataire_id;
 $$
-LANGUAGE sql SET search_path TO test SECURITY DEFINER;
+LANGUAGE sql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.nb_locataires_present;
+DROP FUNCTION IF EXISTS primmo_bash_dev.nb_locataires_present;
 CREATE OR REPLACE FUNCTION nb_locataires_present( d date )
 RETURNS integer AS
 $$
@@ -146,11 +146,11 @@ $$
    return nb_locataires;
  end
 $$
-LANGUAGE plpgsql SET search_path TO test SECURITY DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.total_loyer_payes_hc_a_date;
-CREATE OR REPLACE FUNCTION test.total_loyer_payes_hc_a_date ( locataire_id integer )
+DROP FUNCTION IF EXISTS primmo_bash_dev.total_loyer_payes_hc_a_date;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.total_loyer_payes_hc_a_date ( locataire_id integer )
 RETURNS numeric AS
 $$
  declare
@@ -161,7 +161,7 @@ $$
  BEGIN
 	 raise notice 'FONCTION : calcul du total des loyer hc payésà date';
 
-	select upper( periode_occupation ) into date_fin_calcul from test.locataire where id = locataire_id;
+	select upper( periode_occupation ) into date_fin_calcul from primmo_bash_dev.locataire where id = locataire_id;
 
 	if date_fin_calcul is null then
 		 date_fin_calcul = current_date;
@@ -173,17 +173,17 @@ $$
     	+
     ( ( loyer_mensuel_hc / 30.5 ) * extract( day from age( date_fin_calcul, lower( periode_occupation )  ) ) )
 		into m
-	from test.locataire  
+	from primmo_bash_dev.locataire  
 	where id = locataire_id;
 
    return m;
  end
 $$
-LANGUAGE plpgsql SET search_path TO test SECURITY DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.total_provisions_payees_a_date;
-CREATE OR REPLACE FUNCTION test.total_provisions_payees_a_date ( locataire_id integer )
+DROP FUNCTION IF EXISTS primmo_bash_dev.total_provisions_payees_a_date;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.total_provisions_payees_a_date ( locataire_id integer )
 RETURNS numeric AS
 $$
  declare
@@ -194,7 +194,7 @@ $$
  BEGIN
 	 raise notice 'FONCTION : calcul du total des charges provisionnées à date';
 
-	select upper( periode_occupation ) into date_fin_calcul from test.locataire where id = locataire_id;
+	select upper( periode_occupation ) into date_fin_calcul from primmo_bash_dev.locataire where id = locataire_id;
 
 	if date_fin_calcul is null then
 		 date_fin_calcul = current_date;
@@ -209,17 +209,17 @@ $$
     	+
     ( ( provision_charge_mensuelle / 30.5 ) * extract( day from age( date_fin_calcul, lower( periode_occupation )  ) ) )
 		into m
-	from test.locataire  
+	from primmo_bash_dev.locataire  
 	where id = locataire_id;
 
    return m;
  end
 $$
-LANGUAGE plpgsql SET search_path TO test security DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev security DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.locataire_lire_basique_info( int ) RESTRICT;
-CREATE OR REPLACE FUNCTION test.locataire_lire_basique_info( id_locataire int )
+DROP FUNCTION IF EXISTS primmo_bash_dev.locataire_lire_basique_info( int ) RESTRICT;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.locataire_lire_basique_info( id_locataire int )
 RETURNS table( lieu TEXT, nom TEXT, prenom TEXT, id_actif int, date_entree date, label_actif TEXT, total_provisions_reglees NUMERIC, nb_regul int ) 
 AS $$
 		select
@@ -229,18 +229,18 @@ AS $$
 			fk_actif as id_actif,
 			lower( periode_occupation ) as date_entree,
 			a.label as label_,
-			test.total_provisions_payees_a_date( id_locataire )::numeric( 10, 2 ) as total_provisions_reglees,
-			( select count( id ) from  test.regularisation where fk_locataire = id_locataire ) as nb_regul -- avoid the aggregate constraint ( group by all projected columns )
-		from test.locataire c
-		inner join test.actif a on c.fk_actif = a.id
-		inner join test.bien b on b.id = a.fk_bien  
+			primmo_bash_dev.total_provisions_payees_a_date( id_locataire )::numeric( 10, 2 ) as total_provisions_reglees,
+			( select count( id ) from  primmo_bash_dev.regularisation where fk_locataire = id_locataire ) as nb_regul -- avoid the aggregate constraint ( group by all projected columns )
+		from primmo_bash_dev.locataire c
+		inner join primmo_bash_dev.actif a on c.fk_actif = a.id
+		inner join primmo_bash_dev.bien b on b.id = a.fk_bien  
 		where c.id = id_locataire;
 $$ 
-LANGUAGE sql SET search_path TO test SECURITY DEFINER;
+LANGUAGE sql SET search_path TO primmo_bash_dev SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.bilan_occupation( integer );
-CREATE OR REPLACE FUNCTION test.bilan_occupation( locataire_id integer )
+DROP FUNCTION IF EXISTS primmo_bash_dev.bilan_occupation( integer );
+CREATE OR REPLACE FUNCTION primmo_bash_dev.bilan_occupation( locataire_id integer )
 RETURNS SETOF record AS 
 $$
  declare
@@ -318,12 +318,12 @@ $$
 	return;
  end
 $$
-LANGUAGE plpgsql SET search_path TO test security DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev security DEFINER;
 
 -- PARTITION BY NB_jours_total
 
-DROP FUNCTION IF EXISTS test.calcul_provisions_payees( integer, date );
-CREATE OR REPLACE FUNCTION test.calcul_provisions_payees ( locataire_id integer, date_nouvelle_regul date DEFAULT now() )
+DROP FUNCTION IF EXISTS primmo_bash_dev.calcul_provisions_payees( integer, date );
+CREATE OR REPLACE FUNCTION primmo_bash_dev.calcul_provisions_payees ( locataire_id integer, date_nouvelle_regul date DEFAULT now() )
 RETURNS numeric AS
 $$
  declare
@@ -398,7 +398,7 @@ $$
    return m;
  end
 $$
-LANGUAGE plpgsql SET search_path TO test security DEFINER;
+LANGUAGE plpgsql SET search_path TO primmo_bash_dev security DEFINER;
 
 
 /*
@@ -407,8 +407,8 @@ LANGUAGE plpgsql SET search_path TO test security DEFINER;
  * 
  * TODO : Prorata et debut de bail le 01 du mois ... 
  */
-DROP FUNCTION IF EXISTS test.quittance_generer( integer ) CASCADE;
-CREATE OR REPLACE FUNCTION test.quittance_generer( locataire_id integer )
+DROP FUNCTION IF EXISTS primmo_bash_dev.quittance_generer( integer ) CASCADE;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.quittance_generer( locataire_id integer )
 RETURNS void AS
 $$
  declare
@@ -583,7 +583,7 @@ $$
 
 			quittance_periode =  TO_CHAR( mois_quittance_en_cours, 'YYYY-MM');
 
-			-- on teste si on arrive sur la fin de bail
+			-- on primmo_bash_deve si on arrive sur la fin de bail
 			-- dernière quittance
 			raise notice 'Quittance : Traitement >> Mois en cours  : %, Fin Période : %.', mois_quittance_en_cours, date_fin_bail ; 
 			if TO_CHAR( mois_quittance_en_cours, 'YYYY-MM') = TO_CHAR( date_fin_bail, 'YYYY-MM') then
@@ -645,11 +645,11 @@ $$
 
 	end loop;
  end
-$$ LANGUAGE plpgsql SET search_path TO test,public security DEFINER;
+$$ LANGUAGE plpgsql SET search_path TO primmo_bash_dev,public security DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.quittance_statut_from_gum( ) CASCADE;
-CREATE OR REPLACE FUNCTION test.quittance_statut_from_gum( )
+DROP FUNCTION IF EXISTS primmo_bash_dev.quittance_statut_from_gum( ) CASCADE;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.quittance_statut_from_gum( )
 RETURNS TABLE( statut TEXT ) AS
 $$
  	 WITH loc AS (
@@ -659,8 +659,8 @@ $$
 			prenom,
 			count( q.id ) nb_quittance,
 			max( q.periode_couverte )  derniere_quittance
-		from test.locataire l
-		LEFT OUTER JOIN test.quittance q
+		from primmo_bash_dev.locataire l
+		LEFT OUTER JOIN primmo_bash_dev.quittance q
 		ON q.fk_locataire = l.id
 		GROUP BY l.id
 		order by id
@@ -670,9 +670,9 @@ $$
 			CASE WHEN nb_quittance = 0 THEN 
 				'QUITTANCABLE ! Aucune Quittance trouvée'
 			ELSE 
-				CASE WHEN test.quittance_periode_arret( l.id ) = derniere_quittance THEN 
+				CASE WHEN primmo_bash_dev.quittance_periode_arret( l.id ) = derniere_quittance THEN 
 						concat( 'A jour. ', l.nb_quittance, ' Quittance(s)' )
-					WHEN test.quittance_periode_arret( l.id ) > derniere_quittance THEN
+					WHEN primmo_bash_dev.quittance_periode_arret( l.id ) > derniere_quittance THEN
 						concat( 'QUITTANCABLE !. ', l.nb_quittance, ' Quittance(s). Dernière ( ', derniere_quittance, ' )' )
 					ELSE
 						'Functionnal Error. Improvable Business Rule  Design'
@@ -682,8 +682,8 @@ $$
 			':', l.id
 		)
 	FROM loc l;
-$$ LANGUAGE sql SET search_path TO test,public security DEFINER;
-COMMENT ON FUNCTION test.quittance_statut_from_gum IS 'FUNCTION. Renvoi un statut simple des quittances par locataire. Formattage spécialisé pour GUM CHOOSE ';
+$$ LANGUAGE sql SET search_path TO primmo_bash_dev,public security DEFINER;
+COMMENT ON FUNCTION primmo_bash_dev.quittance_statut_from_gum IS 'FUNCTION. Renvoi un statut simple des quittances par locataire. Formattage spécialisé pour GUM CHOOSE ';
 
 \q
 ---------------------
@@ -694,13 +694,13 @@ COMMENT ON FUNCTION test.quittance_statut_from_gum IS 'FUNCTION. Renvoi un statu
 
 
 
-TRUNCATE TABLE test.quittance RESTART IDENTITY;
-SELECT test.quittance_generer( 1 );
-SELECT test.quittance_statut_from_gum();
+TRUNCATE TABLE primmo_bash_dev.quittance RESTART IDENTITY;
+SELECT primmo_bash_dev.quittance_generer( 1 );
+SELECT primmo_bash_dev.quittance_statut_from_gum();
 
-TABLE test.quittance;
+TABLE primmo_bash_dev.quittance;
 
-DELETE FROM test.quittance WHERE id > 7 AND fk_locataire = 5;
+DELETE FROM primmo_bash_dev.quittance WHERE id > 7 AND fk_locataire = 5;
 
 
- select test.date_fin_bail ( 10 );
+ select primmo_bash_dev.date_fin_bail ( 10 );

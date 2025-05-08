@@ -1,8 +1,8 @@
 /* FONCTIONS REGULARISATION */
 
 
-DROP FUNCTION IF EXISTS test.regularisation_est_presente;
-CREATE OR REPLACE FUNCTION test.regularisation_est_presente( locataire_id integer )
+DROP FUNCTION IF EXISTS primmo_bash_dev.regularisation_est_presente;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.regularisation_est_presente( locataire_id integer )
 RETURNS boolean AS
 $$
  declare
@@ -16,14 +16,14 @@ $$
 	return regularisation_existe;
  end
 $$
-LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 
 
 /*
  * Recherche et information des locataire pour qui une régularisation est pertinente
  */
-DROP FUNCTION IF EXISTS test.regularisations_pertinentes;
-CREATE OR REPLACE FUNCTION test.regularisations_pertinentes()
+DROP FUNCTION IF EXISTS primmo_bash_dev.regularisations_pertinentes;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.regularisations_pertinentes()
 RETURNS boolean AS
 $$
  declare
@@ -31,7 +31,7 @@ $$
 	
  end
 $$
-LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 
 /*
  * Pertinentes si : 
@@ -42,8 +42,8 @@ LANGUAGE plpgsql PARALLEL SAFE SET search_path TO 'test' SECURITY DEFINER;
  * 		sinon
  * 			des factures existent, qui sont ultérieurs à la date de début de bail 
  */
-DROP FUNCTION IF EXISTS test.regularisation_est_pertinente;
-CREATE OR REPLACE FUNCTION test.regularisation_est_pertinente( id_locataire integer, date_regul text default now() )
+DROP FUNCTION IF EXISTS primmo_bash_dev.regularisation_est_pertinente;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.regularisation_est_pertinente( id_locataire integer, date_regul text default now() )
 RETURNS boolean AS
 $$
  declare
@@ -114,10 +114,10 @@ $$
 	end if;
  end 
 $$
-STABLE LANGUAGE plpgsql SET search_path TO 'test' SECURITY DEFINER;
+STABLE LANGUAGE plpgsql SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 
 
-DROP FUNCTION IF EXISTS test.lire_derniere_date_regul;
+DROP FUNCTION IF EXISTS primmo_bash_dev.lire_derniere_date_regul;
 CREATE OR REPLACE FUNCTION lire_derniere_date_regul( locataire_id integer )
 RETURNS date AS
 $$
@@ -135,11 +135,11 @@ $$
   return d;
  end
 $$
-LANGUAGE plpgsql SET search_path TO 'test' SECURITY DEFINER STABLE;
+LANGUAGE plpgsql SET search_path TO 'primmo_bash_dev' SECURITY DEFINER STABLE;
 
 
-DROP FUNCTION IF EXISTS test.locataire_lire_regularisation( int ) RESTRICT;
-CREATE OR REPLACE FUNCTION test.locataire_lire_regularisation( id_locataire int )
+DROP FUNCTION IF EXISTS primmo_bash_dev.locataire_lire_regularisation( int ) RESTRICT;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.locataire_lire_regularisation( id_locataire int )
 RETURNS text  	
 AS $$
 	declare
@@ -149,24 +149,24 @@ AS $$
 			return 'zoooom';
 	end;
 $$ 
-LANGUAGE plpgsql SET search_path TO 'test' SECURITY DEFINER IMMUTABLE;
+LANGUAGE plpgsql SET search_path TO 'primmo_bash_dev' SECURITY DEFINER IMMUTABLE;
 
 
-DROP FUNCTION IF EXISTS test.locataire_lire_lignes_regularisations( int ) RESTRICT;
-CREATE OR REPLACE FUNCTION test.locataire_lire_lignes_regularisations( id_regularisation int )
-RETURNS SETOF test.ligne_regularisation --table( id_regul date, provision_de_charge_affectee_a_la_periode_de_regul NUMERIC, total_individuel NUMERIC, total_charges_reelles_globalles NUMERIC )
+DROP FUNCTION IF EXISTS primmo_bash_dev.locataire_lire_lignes_regularisations( int ) RESTRICT;
+CREATE OR REPLACE FUNCTION primmo_bash_dev.locataire_lire_lignes_regularisations( id_regularisation int )
+RETURNS SETOF primmo_bash_dev.ligne_regularisation --table( id_regul date, provision_de_charge_affectee_a_la_periode_de_regul NUMERIC, total_individuel NUMERIC, total_charges_reelles_globalles NUMERIC )
 AS $$
 		select
 			l.*
-		from test.ligne_regularisation l 
-		inner join test.regularisation r on r.id = l.fk_regularisation
+		from primmo_bash_dev.ligne_regularisation l 
+		inner join primmo_bash_dev.regularisation r on r.id = l.fk_regularisation
 		where r.id = 5;
 $$ 
-LANGUAGE sql SET search_path TO 'test' SECURITY DEFINER IMMUTABLE;
+LANGUAGE sql SET search_path TO 'primmo_bash_dev' SECURITY DEFINER IMMUTABLE;
 
 
-DROP FUNCTION IF EXISTS test.regularisation_precondition_calcul( int );
-CREATE OR REPLACE FUNCTION test.regularisation_precondition_calcul( IN locataire_id integer )
+DROP FUNCTION IF EXISTS primmo_bash_dev.regularisation_precondition_calcul( int );
+CREATE OR REPLACE FUNCTION primmo_bash_dev.regularisation_precondition_calcul( IN locataire_id integer )
 RETURNS boolean AS
 $$
  begin
@@ -185,8 +185,8 @@ $$
 	return true;
  end
 $$
-LANGUAGE plpgsql VOLATILE SET search_path TO 'test' SECURITY DEFINER;
--- SELECT test.regularisation_precondition_calcul( 7 );
+LANGUAGE plpgsql VOLATILE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
+-- SELECT primmo_bash_dev.regularisation_precondition_calcul( 7 );
 
 
 
@@ -205,7 +205,7 @@ $$
 	raise notice 'FONCTION : regularisation_apercu_situation_locataire';
 end
 $$
-LANGUAGE plpgsql VOLATILE SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE plpgsql VOLATILE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 */
 
 
@@ -241,14 +241,14 @@ $$
   return oResult;
 end
 $$
-LANGUAGE plpgsql VOLATILE SET search_path TO 'test' SECURITY DEFINER;
+LANGUAGE plpgsql VOLATILE SET search_path TO 'primmo_bash_dev' SECURITY DEFINER;
 
 
 /*
  * calcul : permet d'adapter le retour de la fonction suivant la fonction d'appel
  */
 DROP FUNCTION IF EXISTS regularisation_moteur_de_calcul;
-CREATE OR REPLACE FUNCTION test.regularisation_moteur_de_calcul( IN locataire_id integer, algo_type TEXT, d date DEFAULT null )
+CREATE OR REPLACE FUNCTION primmo_bash_dev.regularisation_moteur_de_calcul( IN locataire_id integer, algo_type TEXT, d date DEFAULT null )
 RETURNS boolean AS
 $$
 	DECLARE
@@ -577,4 +577,4 @@ $$
     RETURN TRUE;
 	END
 $$
-LANGUAGE plpgsql SET search_path TO 'test' security DEFINER;
+LANGUAGE plpgsql SET search_path TO 'primmo_bash_dev' security DEFINER;

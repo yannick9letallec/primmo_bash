@@ -1,4 +1,4 @@
-SET search_path TO test, public;
+SET search_path TO primmo_bash_dev, public;
 
 TRUNCATE bien RESTART identity cascade;
 TRUNCATE actif RESTART identity cascade;
@@ -47,7 +47,7 @@ INSERT INTO bien ( label, surface_totale, mise_en_service, teom, config, note ) 
 -- ACTIF
 /*
  * 
- INSERT INTO test.actif ( id, label, fk_bien, surface, note ) VALUES 
+ INSERT INTO primmo_bash_dev.actif ( id, label, fk_bien, surface, note ) VALUES 
 ( 1, 'Chambre 1', 1, 20, 'La plus grande ( + confort, - prix ( non bloquant )). Au RDC ( facile d''accès ), proche porte entrée. Atout charme ( sol travertin, grande cheminée ornementale, mobilier qualitatif. Nég : prix, proche PE. ',
 ( 2, 'Chambre 2', 1, 16, 'Taille moyenne. 1er Et. Accès partagée avec 3 chambres. Charme : sol parquet rustique. Jolie Cheminée. Murs finition vynile. Nég : sous escalier.',
 ( 3, 'Chambre 3', 1, 14, 'Taille moyenne. 1er Et. Accès partagée avec 3 chambres. Charme : sol parquet rustique. Niche avec bureau intégré. Vue jardin. Nég : Collée SDB + cloison ch4',
@@ -171,8 +171,8 @@ ALTER TABLE charges ENABLE TRIGGER ALL;
 
 
 -- REGULARISATIONS
--- \copy test.regularisation from '/home/yannickletallec/Documents/IMMO-APP/CODE/SQL/CHARGES/Scripts/TEST/Files/LIVE_DATA/regularisation_montlouis.csv' delimiter ';';
--- \copy test.ligne_regularisation from '/home/yannickletallec/Documents/IMMO-APP/CODE/SQL/CHARGES/Scripts/TEST/Files/LIVE_DATA/ligne_regularisation_montlouis.csv' delimiter ';';    
+-- \copy primmo_bash_dev.regularisation from '/home/yannickletallec/Documents/IMMO-APP/CODE/SQL/CHARGES/Scripts/TEST/Files/LIVE_DATA/regularisation_montlouis.csv' delimiter ';';
+-- \copy primmo_bash_dev.ligne_regularisation from '/home/yannickletallec/Documents/IMMO-APP/CODE/SQL/CHARGES/Scripts/TEST/Files/LIVE_DATA/ligne_regularisation_montlouis.csv' delimiter ';';    
 
 
 RESET search_path;
@@ -180,21 +180,21 @@ RESET search_path;
 
 \q
 
-TABLE test.bien;
-TABLE test.actif;
-TABLE test.type_charge;
-TABLE test.charges;
-TABLE test.locataire;
-TABLE test.regularisation;
-TABLE test.ligne_regularisation;
-TABLE test.ligne_regularisation_type;
+TABLE primmo_bash_dev.bien;
+TABLE primmo_bash_dev.actif;
+TABLE primmo_bash_dev.type_charge;
+TABLE primmo_bash_dev.charges;
+TABLE primmo_bash_dev.locataire;
+TABLE primmo_bash_dev.regularisation;
+TABLE primmo_bash_dev.ligne_regularisation;
+TABLE primmo_bash_dev.ligne_regularisation_type;
 
 
 
-TRUNCATE test.bien cascade;
-TRUNCATE test.actif cascade;
-TRUNCATE test.locataire cascade;
-TRUNCATE test.charges RESTART identity CASCADE;
+TRUNCATE primmo_bash_dev.bien cascade;
+TRUNCATE primmo_bash_dev.actif cascade;
+TRUNCATE primmo_bash_dev.locataire cascade;
+TRUNCATE primmo_bash_dev.charges RESTART identity CASCADE;
 TRUNCATE TEST.REGULARISATION   CASCADE;
 TRUNCATE TEST.LIGNE_REGULARISATION RESTART identity cascade;
 
